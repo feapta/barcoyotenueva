@@ -1,0 +1,1 @@
+function color_body(){document.querySelector(".principal").classList.toggle("comentarios")}color_body();
