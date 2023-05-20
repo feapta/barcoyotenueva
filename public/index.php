@@ -6,12 +6,13 @@ require_once __DIR__ . '/../includes/app.php';
 
 use MVC\Router;
 use Controllers\AdminControllers;
-use Controllers\ComentariosControllers;
+use Controllers\BlogControllers;
 use Controllers\ProductosControllers;
 use Controllers\PaginasControllers;
 use Controllers\UsuariosControllers;
 use Controllers\CategoriasControllers;
 use Controllers\OfertasControllers;
+use Controllers\Usuarios_regisControllers;
 
 $router = new Router();
 
@@ -20,34 +21,65 @@ $router->get('/', [PaginasControllers::class, 'index']);
 $router->get('/contacto', [PaginasControllers::class, 'contacto']); 
 $router->get('/nosotros', [PaginasControllers::class, 'nosotros']); 
 
-// Registro de usuarios
+// Usuarios
 $router->get('/login', [UsuariosControllers::class, 'login']);  
-$router->post('/login', [UsuariosControllers::class, 'login']);  
-$router->get('/usuarios/registro', [UsuariosControllers::class, 'registro']);   
-$router->post('/usuarios/registro', [UsuariosControllers::class, 'registro']);  
-$router->get('/usuarios/actualizar', [UsuariosControllers::class, 'actualizar']);  
-$router->post('/usuarios/actualizar', [UsuariosControllers::class, 'actualizar']);  
-$router->get('/olvidado', [UsuariosControllers::class, 'olvidado']);  
-$router->post('/olvidado', [UsuariosControllers::class, 'olvidado']);  
+$router->post('/login', [UsuariosControllers::class, 'login']); 
 $router->get('/listado', [UsuariosControllers::class, 'listado']);  
 $router->get('/mensaje', [UsuariosControllers::class, 'mensaje']);  
 $router->get('/confirmar', [UsuariosControllers::class, 'confirmar']);  
-$router->get('/usuarios_registrados', [UsuariosControllers::class, 'usuarios_registrados']);  
 $router->get('/logout', [UsuariosControllers::class, 'logout']);  
+
+$router->get('/usuarios/registro', [UsuariosControllers::class, 'registro']);   
+$router->post('/usuarios/registro', [UsuariosControllers::class, 'registro']);  
+
+$router->get('/usuarios/actualizar', [UsuariosControllers::class, 'actualizar']);  
+$router->post('/usuarios/actualizar', [UsuariosControllers::class, 'actualizar']);
+
+$router->get('/usuarios/cambiar_pass', [UsuariosControllers::class, 'cambiar_pass']);  
+$router->post('/usuarios/cambiar_pass', [UsuariosControllers::class, 'cambiar_pass']);  
+
+$router->get('/usuarios/olvidado', [UsuariosControllers::class, 'olvidado']);  
+$router->post('/usuarios/olvidado', [UsuariosControllers::class, 'olvidado']); 
+
+$router->get('/usuarios/recuperar', [UsuariosControllers::class, 'recuperar']);  
+$router->post('/usuarios/recuperar', [UsuariosControllers::class, 'recuperar']);  
+
+
+
+// USUARIOS REGISTRADOS
+$router->get('/usuarios_registrados', [Usuarios_regisControllers::class, 'usuarios_registrados']);  
+$router->post('/usuarios_registrados', [Usuarios_regisControllers::class, 'usuarios_registrados']); 
+
+$router->get('/user/listado', [Usuarios_regisControllers::class, 'listar_user']);  
+$router->post('/user/listado_P', [Usuarios_regisControllers::class, 'listar_user_P']); 
+
+$router->get('/user/ofertas', [Usuarios_regisControllers::class, 'listar_ofertas_user']);  
+$router->post('/user/ofertas_P', [Usuarios_regisControllers::class, 'listar_ofertas_user_P']);
+
+$router->get('/user/crear_ofertas', [Usuarios_regisControllers::class, 'crear_ofertas_user']);  
+$router->post('/user/crear_ofertas', [Usuarios_regisControllers::class, 'crear_ofertas_user']); 
+
+$router->get('/user/email', [Usuarios_regisControllers::class, 'email_user']);  
+$router->post('/user/email_P', [Usuarios_regisControllers::class, 'email_user_P']); 
+ 
+$router->post('/user/dejar', [Usuarios_regisControllers::class, 'dejar_user']);  
+$router->post('/user/enviar_mail', [Usuarios_regisControllers::class, 'enviar_mail']);  
+
 
 // Cartas
 $router->get('/ofertas', [ProductosControllers::class, 'listar_ofertas']);   
 
 $router->get('/carta_ofertas', [ProductosControllers::class, 'carta_ofertas']);   
-$router->get('/carta_ofertas_post', [ProductosControllers::class, 'carta_ofertas_post']);   
-$router->post('/carta_ofertas_post', [ProductosControllers::class, 'carta_ofertas_post']);   
+$router->get('/cartaOfertasPost', [ProductosControllers::class, 'carta_ofertas_post']);   
+$router->post('/cartaOfertasPost', [ProductosControllers::class, 'carta_ofertas_post']);   
 
 $router->get('/carta_general', [ProductosControllers::class, 'listar']);    
 $router->get('/cartas/listado', [ProductosControllers::class, 'listar_post']);
 $router->post('/cartas/listado', [ProductosControllers::class, 'listar_post']);
 
 
-// </Administracion> ////////////////////////////////////////////////////////////////
+// Administracion   ////////////////////////////////////////////////////////////////
+
 $router->get('/dashboard', [AdminControllers::class, 'dashboard']);  
 $router->post('/admin/eliminar', [AdminControllers::class, 'eliminar']);
 
@@ -82,12 +114,18 @@ $router->post('/admin/categorias/actualizar', [CategoriasControllers::class, 'ac
 
 
 // Blog
-$router->get('/admin/blog', [ComentariosControllers::class, 'listar']);  
-$router->post('/admin/blog_P', [ComentariosControllers::class, 'listar_P']);  
+$router->get('/admin/blog', [BlogControllers::class, 'listarComentarios']);  
+$router->post('/admin/blog_P', [BlogControllers::class, 'listarComentarios_P']);  
+$router->get('/admin/articulos/listar', [BlogControllers::class, 'listarArticulo']);  
+$router->post('/admin/articulos/listar', [BlogControllers::class, 'listarArticulo_P']);  
+$router->get('/admin/articulos/crear', [BlogControllers::class, 'crearArticulo']);  
+$router->post('/admin/articulos/crear', [BlogControllers::class, 'crearArticulo']);  
+$router->get('/admin/articulos/actualizar', [BlogControllers::class, 'actualizarArticulo']);  
+$router->post('/admin/articulos/actualizar', [BlogControllers::class, 'actualizarArticulo']);  
 
-$router->get('/blog', [ComentariosControllers::class, 'listado']);   
-$router->get('/dejar', [ComentariosControllers::class, 'dejar']);   
-$router->post('/dejar', [ComentariosControllers::class, 'dejar']);   
+$router->get('/blog', [BlogControllers::class, 'blog']);   
+$router->get('/dejar', [BlogControllers::class, 'dejar']);   
+$router->post('/dejar', [BlogControllers::class, 'dejar']);   
 
 // Comprueba y valida las rutas, que existan y les asigna las funciones del Controlador
 $router->comprobarRutas();

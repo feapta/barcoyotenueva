@@ -38,21 +38,21 @@ class OfertasControllers {
         if($_SERVER['REQUEST_METHOD'] === 'POST'){
             $ofertas = new Ofertas($_POST['oferta']);
             
-            // Seccion para subir imagenes
-            $nombreImagen = md5( uniqid( rand(), true)) . ".jpg"; // 
-            
+            $nombreImagen = md5( uniqid( rand(), true)) . ".jpg";                   // Seccion para subir imagenes
+
             if($_FILES['oferta']['tmp_name']['imagen']){
                 $imagen = Image::make($_FILES['oferta']['tmp_name']['imagen'])->resize(350, 250);
                 $ofertas->setImagen($nombreImagen, $carpeta);                                   
-               }
-               $alertas = $ofertas->validar();
-               
-               if(empty($alertas)){
+            }
+
+            $alertas = $ofertas->validar();
+            if(empty($alertas)){
                   
-                    $imagen->save($carpeta . $nombreImagen);                         // Guarda la imagen en el disco duro con la libreria intervention
-                    $ofertas->guardar();
+                $imagen->save($carpeta . $nombreImagen);                         // Guarda la imagen en el disco duro con la libreria intervention
                 
-               header('Location: /admin/ofertas');
+                $ofertas->guardar();
+            
+                header('Location: /admin/ofertas');
             }
         }
 
@@ -77,21 +77,19 @@ class OfertasControllers {
     
             // Generar nombre unico para cada imagen
             $nombreImagen = md5( uniqid( rand(), true)) . ".jpg"; // 
-            
-            // Setear la imagen a la clase
-            if($_FILES['oferta']['tmp_name']['imagen']){
+
+            if($_FILES['oferta']['tmp_name']['imagen']){            // Setear la imagen a la clase
                 $imagen = Image::make($_FILES['oferta']['tmp_name']['imagen'])->resize(350, 250);
                 $ofertas->setImagen($nombreImagen, $carpeta);                                   
                }
-
-             // Inserta el registro en la base de datos si no hay errores
-            if(empty($alertas)){
-
+            
+            if(empty($alertas)){                                     // Inserta el registro en la base de datos si no hay errores
                 if($_FILES['oferta']['tmp_name']['imagen']){
                     $imagen->save($carpeta . $nombreImagen);
                 }
                
                 $ofertas->guardar();
+
                 header('Location: /admin/ofertas');
              }
         }

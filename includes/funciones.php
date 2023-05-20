@@ -9,6 +9,7 @@ define('CARPETA_IMAGEN_CATEGORIAS', $_SERVER['DOCUMENT_ROOT']. '/imagenes_catego
 define('CARPETA_IMAGEN_OFERTAS', $_SERVER['DOCUMENT_ROOT']. '/imagenes_ofertas/');
 define('CARPETA_IMAGEN_CARTAS', $_SERVER['DOCUMENT_ROOT']. '/imagenes_cartas/');
 define('CARPETA_IMAGEN_COMENTARIOS', $_SERVER['DOCUMENT_ROOT']. '/imagenes_comentarios/');
+define('CARPETA_IMAGEN_ARTICULOS', $_SERVER['DOCUMENT_ROOT']. '/imagenes_articulos/');
 
 
 // Se recomienda hacer uso de los tipos de datos
@@ -29,14 +30,6 @@ function s($html) : string {
     return $s;
 }
 
-function esUltimo(string $actual, string $proximo): bool {
-
-    if($actual !== $proximo) {
-        return true;
-    }
-    return false;
-}
-
 // Función que revisa que el usuario este autenticado
 function isAuth() : void {
     if(!isset($_SESSION['login'])) {
@@ -44,6 +37,7 @@ function isAuth() : void {
     }
 }
 
+// Para proteger el panel de control o administracion
 function isAdmin() : void {
     if(!isset($_SESSION['admin'])) {
         header('Location: /');
@@ -61,37 +55,11 @@ function validar0Redireccionar(string $url){
     return $id;
 }
 
-
 // Valida el contenido para eliminar para saber de que tabla deseamos eliminar video 387
 function validarTipoContenido($tipo) {
-    $tipos = ['producto', 'categoria', 'usuario', 'comentario', 'oferta'];
+    $tipos = ['producto', 'categoria', 'usuario', 'comentario', 'oferta', 'articulo', 'oferta_regis', 'oferta_temporal', 'usuario_regis'];
 
     return in_array($tipo, $tipos);
-}
-
-
-
-// Muestra mensajes
-function notificaciones($codigo) {
-    $mensaje = '';
-    
-    switch ($codigo) {
-        case 1:
-            $mensaje = 'Creado correctamente';
-            break;
-        case 2:
-            $mensaje = 'Actualizado correctamente';
-            break;
-        case 3:
-            $mensaje = 'Eliminado correctamente';
-            break;
-        default:
-            $mensaje = false;
-            break;
-           
-        }
-
-        return $mensaje;
 }
 
 

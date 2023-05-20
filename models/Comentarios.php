@@ -6,7 +6,7 @@ namespace Model;
 
 class Comentarios extends ActiveRecord {
     protected static $tabla = 'comentarios';
-    protected static $columnasDB = ['id','nombre', 'imagen', 'titulo', 'texto', 'estrellas', 'creada'];
+    protected static $columnasDB = ['id','nombre', 'imagen', 'titulo', 'texto', 'estrellas', 'regis', 'id_usuario', 'creada'];
 
     public $id;
     public $nombre;
@@ -14,6 +14,8 @@ class Comentarios extends ActiveRecord {
     public $titulo;
     public $texto;
     public $estrellas;
+    public $regis;
+    public $id_usuario;
     public $creada;
 
 
@@ -24,6 +26,8 @@ class Comentarios extends ActiveRecord {
         $this->titulo = $args['titulo'] ?? '';
         $this->texto = $args['texto'] ?? '';
         $this->estrellas = $args['estrellas'] ?? 0;
+        $this->regis = $args['regis'] ?? 0;
+        $this->id_usuario = $args['id_usuario'] ?? 0;
         $this->creada = date('Y/m/d');
     }
 

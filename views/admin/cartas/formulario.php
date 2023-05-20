@@ -43,7 +43,7 @@
 
         <div class="campo">
             <label for="descripcion">Descripción</label>
-            <textarea name="producto[descripcion]" id="descripcion" cols="40" rows="4"><?php echo s($productos->descripcion); ?></textarea>
+            <textarea name="producto[descripcion]" id="descripcion"><?php echo s($productos->descripcion); ?></textarea>
         </div>
 
         <div class="campo">
@@ -67,25 +67,30 @@
 
         <div class="campo">
             <label for="precio_ofer">Precio oferta</label>
-            <input type="number" step="0.01" id="precio_ofer" name="producto[precio_ofer]" placeholder="0,00" value=<?php echo s($productos->precio_ofer); ?>>
+            <input type="number" step="0.01" id="precio_ofer" class="precios" name="producto[precio_ofer]" placeholder="0,00" min="0" value=<?php echo s($productos->precio_ofer); ?>>
         </div>
     
         <div class="campo">
             <label for="precio_med">Precio media</label>
-            <input type="number" step="0.01" id="precio_med" name="producto[precio_med]" placeholder="0,00" value=<?php echo s($productos->precio_med); ?>>
+            <input type="number" step="0.01" id="precio_med" class="precios" name="producto[precio_med]" placeholder="0,00" min="0" value=<?php echo s($productos->precio_med); ?>>
         </div>
 
         <div class="campo">
             <label for="imagen">Imagen</label>
-        <input type="file" id="imagen" name="producto[imagen]" placeholder="Imagen" accept="image/jpeg, image/png">
+            <input type="file" id="imagen" name="producto[imagen]" placeholder="Imagen" accept="image/jpeg, image/png">
         </div>
 
-        <?php  if($productos->imagen) { ?>
-            <img src="/imagenes_cartas/<?php echo $productos->imagen ?>" class="imagen">
-        <?php } ?>
+        <div class="contenedor_imagen">
+            <?php  if($productos->imagen) { ?>
+                <img src="/imagenes_cartas/<?php echo $productos->imagen ?>" class="imagen">
+            <?php } ?>
+        </div>
 
         <div class="botones">
             <input type="submit" value="Guardar" class="boton_verde">
             <a href="/admin/carta_general" class="boton_verde">Volver</a>
         </div>
 </div>
+
+
+<script src="/build/js/formu.js"></script>

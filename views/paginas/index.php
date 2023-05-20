@@ -2,53 +2,53 @@
 <!-- Pagina index -->
 
     <!-- Cartas -->
-    <main class="contenedor carta">
-        <h1>Cartas</h1>
-        <div class="contenedor_cartas">
-            <div class="cartas">
-                <div class="conte_titulo">
-                    <h3>Ofertas temporada</h3>
-                </div>
+    <div class="contenedor contenedorCartas">
+        <div class="cartas">
+            <div class="conteTitulo">
+                <h3>Ofertas temporada</h3>
+            </div>
 
-                <div class="conte_img">
-                    <a href="/ofertas">
-                        <img loading="lazy" src="/build/img/ofertas.webp" alt="Ofertas">
-                    </a>
-                </div>
-                <div class="conte_a">
-                    <a href="/ofertas" class="boton_amarillo-block">Ver</a>
-                </div>
+            <div class="conteImg">
+                <a href="/ofertas">
+                    <img loading="lazy" src="/build/img/ofertas.webp" alt="Ofertas">
+                </a>
             </div>
-           
-            <div class="cartas">
-                <div class="conte_titulo">
-                    <h3>Carta de ofertas</h3>
-                </div>
-                <div class="conte_img">
-                    <a href="/carta_ofertas" >
-                        <img loading="lazy" src="/build/img/carta_ofertas.webp" alt="Carta ofertas">
-                    </a>
-                </div>
-                <div class="conte_a">
-                    <a href="/carta_ofertas" class="boton_amarillo-block">Ver</a>
-                </div>
-            </div>
-           
-            <div class="cartas">
-                <div class="conte_titulo">
-                    <h3>Carta general</h3>
-                </div>
-                <div class="conte_img">
-                    <a href="/carta_general">
-                        <img loading="lazy" src="/build/img/carta.webp" alt="Carta principal">
-                    </a>
-                </div>
-                <div class="conte_a">
-                    <a href="/carta_general" class="boton_amarillo-block">Ver</a>
-                </div>
+
+            <div class="conteBoton">
+                <a href="/ofertas" class="boton_amarillo-block">Ver</a>
             </div>
         </div>
-    </main>
+        
+        <div class="cartas">
+            <div class="conteTitulo">
+                <h3>Carta de ofertas</h3>
+            </div>
+
+            <div class="conteImg">
+                <a href="/carta_ofertas" >
+                    <img loading="lazy" src="/build/img/carta_ofertas.webp" alt="Carta ofertas">
+                </a>
+            </div>
+
+            <div class="conteBoton">
+                <a href="/carta_ofertas" class="boton_amarillo-block">Ver</a>
+            </div>
+        </div>
+        
+        <div class="cartas">
+            <div class="conteTitulo">
+                <h3>Carta general</h3>
+            </div>
+            <div class="conteImg">
+                <a href="/carta_general">
+                    <img loading="lazy" src="/build/img/carta.webp" alt="Carta principal">
+                </a>
+            </div>
+            <div class="conteBoton">
+                <a href="/carta_general" class="boton_amarillo-block">Ver</a>
+            </div>
+        </div>
+    </div>
 
     <!-- Imagen pollos por encargo -->
     <div class="encargo">
@@ -60,19 +60,24 @@
     </div>
 
     <!-- Reseñas -->
-    <div class="contenedor califica grey-100">
-        <h2>Blog</h2>
+    <div class="contenedor contenedorComentarios">
+        <h2>Comentarios</h2>
+        <hr class="linea">
         <div class="calificaciones">
-            <div class="pequeña">
-                <?php foreach($calificaciones as $califica) { ?>
-                    <ul class="calificacion">
-                        <li class="cabecera">
+            <div class="tresComentarios">
+                <ul>
+                    <?php foreach($calificaciones as $califica) { ?>
+                        <li>
                             <div class="izquierda">
-                                <img src="/imagenes_usuarios/<?php echo $califica->imagen;?>" alt=""></p>
-                            </div>
-                            <div class="derecha">
-                                <p><?php echo $califica->nombre;    ?></p>
+                                <?php if($califica->imagen_user) { ?>
+                                    <img src="/imagenes_usuarios/<?php echo $califica->imagen_user; ?>" alt="Imagen"></p>
+                                <?php  } else { ?>
+                                    <img src="/imagenes_comentarios/<?php echo $califica->imagen;?>" alt="Imagen">
+                                <?php }?>
+                                <h5><?php echo $califica->nombre;    ?></h5>
                                 <p><?php echo $califica->creada;    ?></p>
+                            </div>
+                            <div class="centro">
                                 <p class="clasificacion">   
                                     <span class="fa fa-star <?php echo $califica->estrellas >= 1 ? 'checked' : ''  ?>">  </span>
                                     <span class="fa fa-star <?php echo $califica->estrellas >= 2 ? 'checked' : ''  ?>">  </span>
@@ -83,18 +88,20 @@
                                 <p><?php echo $califica->texto; ?></p>
                             </div>
                         </li>
-                    </ul>
-                <?php  } ?>
+                        <hr class="linea2">
+                    <?php  } ?>
+                </ul>
             </div>
 
-            <div class="grande">
+            <div class="unComentario">
                 <?php foreach($califica_una as $califica_A) { ?>
                     <ul class="calificacion">
                         <li class="cabecera">
-                            <img src="/imagenes_usuarios/<?php echo $califica_A->imagen;?>" alt="Imagen"></p>
+                            <img src="/imagenes_comentarios/<?php echo $califica_A->imagen;?>" alt="Imagen"></p>
                             <h4><?php echo $califica_A->nombre;    ?></h4>
                             <p><?php echo $califica_A->creada;    ?></p>
-                            <p class="clasificacion">   
+                            <p class="clasifi
+                            cacion">   
                                 <span class="fa fa-star <?php echo $califica_A->estrellas >= 1 ? 'checked' : ''  ?>">  </span>
                                 <span class="fa fa-star <?php echo $califica_A->estrellas >= 2 ? 'checked' : ''  ?>">  </span>
                                 <span class="fa fa-star <?php echo $califica_A->estrellas >= 3 ? 'checked' : ''  ?>">  </span>
@@ -110,10 +117,10 @@
             </div>
         </div>
 
-        <div class="contenedor_botones">
-            <a href="/blog" class="boton_amarillo">  Ver todas  </a> 
-            <a href="/dejar" class="boton_amarillo">  Dejar reseña  </a>
-            <a href="/crear" class="boton_amarillo">  Registrarse  </a>
+        <div class="botones">
+            <a href="/blog" class="boton_amarillo">Ver todas</a> 
+            <a href="/dejar" class="boton_amarillo">Comentar</a>
+            <a href="/usuarios/registro" class="boton_amarillo">Registrarse</a>
         </div>
     </div>
 

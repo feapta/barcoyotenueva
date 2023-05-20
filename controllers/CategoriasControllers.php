@@ -53,14 +53,12 @@ class CategoriasControllers{
             $alertas = $categorias->validar();
            
             if(empty($alertas)){
-                if(!is_dir($carpeta)){
-                    mkdir($carpeta);                                              // Crea la carpeta en el directorio raiz si no esta ya creada
-                }
+  
                 $imagen->save($carpeta . $nombreImagen);                         // Guarda la imagen en el disco duro con la libreria intervention
-                
+ 
                 $categorias->guardar();
                 
-               header('Location: /categorias');
+               header('Location: /admin/categorias');
             }
         }
 
@@ -72,10 +70,11 @@ class CategoriasControllers{
     }
 
     public static function actualizar(Router $router){
-        $id = validar0Redireccionar('/categorias');
+        $id = validar0Redireccionar('/admin/categorias');
         $categorias = Categorias::find($id);
         $alertas = [];
- 
+        $carpeta = CARPETA_IMAGEN_CATEGORIAS;
+
         if($_SERVER['REQUEST_METHOD'] === 'POST'){
             $args = $_POST['categorias'];
             $categorias->sincronizar($args);
@@ -89,18 +88,18 @@ class CategoriasControllers{
             // Setear la imagen a la clase
             if($_FILES['categorias']['tmp_name']['imagen']){
                 $imagen = Image::make($_FILES['categorias']['tmp_name']['imagen'])->resize(350, 250);
-                $categorias->setImagen($nombreImagen);                                   
+                $categorias->setImagen($nombreImagen, $carpeta);                                   
                }
 
              // Inserta el registro en la base de datos si no hay errores
             if(empty($alertas)){
-                $carpeta = CARPETA_IMAGEN_CATEGORIAS;
+
                 if($_FILES['categorias']['tmp_name']['imagen']){
                     $imagen->save($carpeta . $nombreImagen);
                 }
 
                 $categorias->guardar();
-                header('Location: /categorias/actualizar');
+                header('Location: /admin/categorias');
              }
         }
 

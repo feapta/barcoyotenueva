@@ -10,18 +10,17 @@
     </div>
 
     <div class="tabla_oferta">
-        <?php foreach($ofertas as $oferta) { ?>
-            <ul class="tabla_a">
+        <ul class="tabla_a">
+            <?php foreach($ofertas as $oferta) { ?>
                 <li class="seleccion">
-                        <img src="/imagenes_ofertas/<?php echo $oferta->imagen; ?>" alt="Imagenes">
-                        <h4>    <?php echo $oferta->titulo; ?> </h4>
-                        <p>     <?php echo $oferta->descripcion; ?></p>
-                        <h6>    <?php echo $oferta->precio; ?> €</h6>
-                        <h6> Valida hasta:   <?php echo $oferta->valida; ?></h6>
-                    </a>
+                    <img src="/imagenes_ofertas/<?php echo $oferta->imagen; ?>" alt="Imagenes">
+                    <h4>    <?php echo $oferta->titulo; ?> </h4>
+                    <p>     <?php echo $oferta->descripcion; ?></p>
+                    <h5>    <?php echo $oferta->precio; ?> €</h5>
+                    <p> Valida hasta:   <?php echo $oferta->valida; ?></p>
                 </li>
-            </ul>
-        <?php } ?>
+            <?php } ?>
+        </ul>
     </div>
 
     <div class="botones">

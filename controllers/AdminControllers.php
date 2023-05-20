@@ -4,16 +4,21 @@
 
 namespace Controllers;
 
+use Model\Articulos;
 use MVC\Router;
 use Model\Comentarios;
 use Model\Productos;
 use Model\Categorias;
 use Model\Usuarios;
 use Model\Ofertas;
+use Model\Ofertas_user;
 
 class AdminControllers{
     
     public static function dashboard(Router $router){
+        session_start();
+        isAdmin();                  // Para proteger el acceso al panel de control
+
         $cuentaCat = new Categorias;
         $cuentaUsu = new Usuarios;
         $cuentaCom = new Comentarios();
@@ -87,6 +92,26 @@ class AdminControllers{
 
                     echo json_encode($resultado);
                 } 
+                elseif ($tipo === 'usuario_regis'){
+                    $carpeta = CARPETA_IMAGEN_USUARIOS;
+                    $producto = Usuarios::find($_POST['id']);
+
+                    if($producto->imagen){
+                        $imagen = $producto->imagen;
+                        $producto->setImagen($imagen, $carpeta);
+                    }
+
+                    $resultado = $producto->eliminar();                
+
+                    if($resultado){
+                        $resultado =   [
+                            'resultado' => $resultado,
+                            'tipo' => 'usuario_regis'
+                        ];
+                    }
+
+                    echo json_encode($resultado);
+                } 
                 elseif ($tipo === 'usuario'){
                     $carpeta = CARPETA_IMAGEN_USUARIOS;
                     $producto = Usuarios::find($_POST['id']);
@@ -143,6 +168,69 @@ class AdminControllers{
                         $resultado =   [
                             'resultado' => $resultado,
                             'tipo' => 'oferta'
+                        ];
+                    }
+
+                    echo json_encode($resultado);
+
+                }
+                elseif ($tipo === 'oferta_temporal'){
+                    $carpeta = CARPETA_IMAGEN_OFERTAS;
+                    $producto = Ofertas::find($_POST['id']);
+
+                    if($producto->imagen){
+                        $imagen = $producto->imagen;
+                        $producto->setImagen($imagen, $carpeta);
+                    }
+
+                    $resultado = $producto->eliminar();                
+
+                    if($resultado){
+                        $resultado =   [
+                            'resultado' => $resultado,
+                            'tipo' => 'oferta_temporal'
+                        ];
+                    }
+
+                    echo json_encode($resultado);
+
+                }
+                elseif ($tipo === 'oferta_regis'){
+                    $carpeta = CARPETA_IMAGEN_OFERTAS;
+                    $producto = Ofertas_user::find($_POST['id']);
+
+                    if($producto->imagen){
+                        $imagen = $producto->imagen;
+                        $producto->setImagen($imagen, $carpeta);
+                    }
+
+                    $resultado = $producto->eliminar();                
+
+                    if($resultado){
+                        $resultado =   [
+                            'resultado' => $resultado,
+                            'tipo' => 'oferta_regis'
+                        ];
+                    }
+
+                    echo json_encode($resultado);
+
+                }
+                elseif ($tipo === 'articulo'){
+                    $carpeta = CARPETA_IMAGEN_ARTICULOS;
+                    $producto = Articulos::find($_POST['id']);
+
+                    if($producto->imagen){
+                        $imagen = $producto->imagen;
+                        $producto->setImagen($imagen, $carpeta);
+                    }
+
+                    $resultado = $producto->eliminar();                
+
+                    if($resultado){
+                        $resultado =   [
+                            'resultado' => $resultado,
+                            'tipo' => 'articulo'
                         ];
                     }
 

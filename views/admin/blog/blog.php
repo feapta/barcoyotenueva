@@ -2,7 +2,7 @@
 
 <!-- Pagina adminsitracion del blog -->
 
-<div class="contenedor contenido_centrado contenedor_tablas">
+<div class="contenedor contenedor_tablas">
     <h3>Administración del blog</h3>
 
     <div class="contenedor_tabla">

@@ -3,7 +3,7 @@
 <!-- Pagina Actualizar de categorias -->
 
 
-<div class="contenedor seccion contenido_centrado carta_general">
+<div class="contenedor contenido_centrado contenedor_actualizar_categorias">
     <h3>Actualizar categorías</h3>
 
 

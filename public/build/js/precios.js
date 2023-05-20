@@ -1,0 +1,1 @@
+document.querySelector("#precio_ofer").addEventListener("blur",(function(e){""===this.value&&(this.value="0.00")})),document.querySelector("#precio_med").addEventListener("blur",(function(e){""===this.value&&(this.value="0.00")}));

@@ -10,8 +10,8 @@ class ActiveRecord {
     protected static $db;
     protected static $tabla = '';
     protected static $columnasDB = [];
-    protected $id = [];
-    protected $imagen = [];
+    public $id;
+    public $imagen;
 
     // Alertas y Mensajes
     protected static $alertas = [];
@@ -96,19 +96,18 @@ class ActiveRecord {
         }
     }
 
-    // Registros - CRUD
+    // Guardar o actualizar
     public function guardar() {
         $resultado = '';
-       
         if(!is_null($this->id)) {
-            $resultado = $this->actualizar();   // actualizar
+            $resultado = $this->actualizar();   // Actualizar
         } else {
             $resultado = $this->crear();        // Crear
         }
         return $resultado;
     }
 
-    // crea un nuevo registro
+    // Crear
     public function crear() {
         // Sanitizar los datos
         $atributos = $this->sanitizarAtributos();
@@ -116,10 +115,10 @@ class ActiveRecord {
         // Insertar en la base de datos
         $query = " INSERT INTO " . static::$tabla . " ( ";
         $query .= join(', ', array_keys($atributos));
-        $query .= " ) VALUES (' "; 
+        $query .= " ) VALUES ('"; 
         $query .= join("', '", array_values($atributos));
         $query .= "') ";
-        
+
         // Resultado de la consulta
         $resultado = self::$db->query($query);
 
@@ -129,7 +128,7 @@ class ActiveRecord {
         ];
     }
 
-    // Actualizar el registro
+    // Actualizar
     public function actualizar() {
         // Sanitizar los datos
         $atributos = $this->sanitizarAtributos();
@@ -153,21 +152,49 @@ class ActiveRecord {
         return $resultado;
     }
 
+    // Buscar y listar registros
+
     // Todos los registros
     public static function all() {
         $query = "SELECT * FROM " . static::$tabla;
         $resultado = self::consultarSQL($query);
         return $resultado;
     }
+
+    // Obtener todos los resultados ordenados por una columna
+    public static function all_columna($columna) {
+        $query = "SELECT * FROM " . static::$tabla . " ORDER BY $columna DESC ";
+        $resultado = self::consultarSQL($query);
+        return $resultado;
+    }
  
-    
-   
     // Devuelve todos los registro en orden descendente
     public static function all_ultimas() {
         $query = "SELECT * FROM " . static::$tabla . " ORDER BY creada DESC ";
         $resultado = self::consultarSQL($query);
         return $resultado;
     }
+
+    // Devuelve todos los registro en orden descendente
+    public static function allOrdenAlfa($columna) {
+        $query = "SELECT * FROM " . static::$tabla . " ORDER BY $columna ASC ";
+        $resultado = self::consultarSQL($query);
+        return $resultado;
+    }
+    // Devuelve todos los registro en orden descendente
+    public static function allOrdenAlfaCartaOfertas($columna) {
+        $query = "SELECT * FROM " . static::$tabla . " WHERE oferta = 1 ORDER BY $columna ASC ";
+        $resultado = self::consultarSQL($query);
+        return $resultado;
+    }
+    // Devuelve todos los registro en orden descendente
+    public static function allOrdenAlfaCartaOfertasporFecha($columna, $fecha) {
+        $query = "SELECT * FROM " . static::$tabla . " WHERE valida > '$fecha' ORDER BY $columna ASC ";
+        $resultado = self::consultarSQL($query);
+        return $resultado;
+    }
+
+    
 
     // Busca un registro por su id
     public static function find($id) {
@@ -183,9 +210,16 @@ class ActiveRecord {
         return array_shift( $resultado ) ;
     }
 
-    // Busca un registro return
+    // Busca un registro con return
     public static function where($columna, $valor) {
         $query = "SELECT * FROM " . static::$tabla  ." WHERE $columna = '$valor'";
+        $resultado = self::consultarSQL($query);
+        return $resultado;
+    }
+    
+    // Busca un registro con return y orden alfabetico
+    public static function whereOrderAlfa($columna, $valor, $orden) {
+        $query = "SELECT * FROM " . static::$tabla  ." WHERE $columna = '$valor' ORDER BY $orden DESC ";
         $resultado = self::consultarSQL($query);
         return $resultado;
     }
@@ -196,7 +230,19 @@ class ActiveRecord {
         $resultado = self::consultarSQL($query);
         return array_shift( $resultado ) ;
     }
+
+    // Busca todos los resultados de comentarios con la imagen del usuario
+    public static function SQL($query) {
+        $resultado = self::consultarSQL($query);
+        return $resultado;
+    }
+
+    public static function SQL_limit($query) {
+        $resultado = self::consultarSQL($query);
+        return $resultado;
+    }
    
+
     // Busca un registro por tabla, columna y valor
     public static function where_tabla_columna($tabla, $columna, $valor) {
         $query = "SELECT * FROM $tabla WHERE $columna = $valor";
@@ -266,5 +312,6 @@ class ActiveRecord {
         $resultado = self::$db->query($query);
         return mysqli_fetch_assoc($resultado);
     }
+
 
 }

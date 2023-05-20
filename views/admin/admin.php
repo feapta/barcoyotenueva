@@ -5,42 +5,40 @@
     <h3>Panel de control</h3>
     
     <div class="contenido">
-        <div class="informe CG">
+        <div class="informe">
             <h4>Carta general</h4>
             <?php foreach($carta_general as $carta_gen) { ?>
-                <p><?php echo $carta_general; ?></p>
+                <p><?php echo $carta_gen; ?></p>
             <?php } ?>
         </div>
 
-        <div class="informe CO">
+        <div class="informe">
             <h4>Carta ofertas</h4>
                 <p><?php echo $cuentas; ?></p>
         </div>
 
-        <div class="informe O">
+        <div class="informe">
             <h4>Ofertas</h4>
             <?php foreach($ofertas as $ofer) { ?>
                 <p><?php echo $ofer; ?></p>
             <?php } ?>
         </div>
 
-        <div class="informe C">
-            <a href="/categorias">
+        <div class="informe">
                 <h4>Categorias</h4>
                 <?php foreach($categorias as $categoria) { ?>
-                    <?php echo $categoria; ?>
+                    <p><?php echo $categoria; ?></p>
                 <?php } ?>
-            </a>
         </div>
 
-        <div class="informe U">
+        <div class="informe">
             <h4>Usuarios</h4>
             <?php foreach($usuarios as $usuario) { ?>
                 <p><?php echo $usuario; ?></p>
             <?php } ?>
         </div>
 
-        <div class="informe B">
+        <div class="informe">
             <h4>Blog</h4>
             <?php foreach($comentarios as $comenta) { ?>
                 <p><?php echo $comenta; ?></p>

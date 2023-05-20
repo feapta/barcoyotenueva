@@ -6,25 +6,19 @@
 
     <?php include_once __DIR__ . "/../templates/alertas.php";  ?>
 
-    <form class="formulario" method="POST" action="/login" novalidate>
-            <div class="campo_login">
+    <form class="contenedor_formulario" method="POST" action="/login" novalidate>
+            <div class="campo">
                 <label for="email">Email</label>
-                <input
-                    type="email"
-                    id="email"
-                    placeholder="Tu Email"
-                    name="email"
-                >
+                <input type="email" id="email" placeholder="Tu Email" name="email">
             </div>
 
-            <div class="campo_login">
+            <div class="campo">
                 <label for="password">Password</label>
-                <input 
-                    type="password"
-                    id="password"
-                    placeholder="Tu Password"
-                    name="password"
-                >
+                <div class="mostrar_password">
+                    <input type="password" id="password" name="password" placeholder="Password">
+                    <img id="ima-1" class="ocultar"src="/build/img/mostrar.webp" alt="">
+                    <img id="ima-2" src="/build/img/esconder.webp" alt="">
+                </div>
             </div>
 
         <input type="submit" class="boton_verde" value="Iniciar Sesión">
@@ -36,3 +30,5 @@
     </div>
 
 </div>
+
+<?php  $script = '<script src="/build/js/mostrar_pass.js"></script>'; ?>

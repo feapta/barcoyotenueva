@@ -4,6 +4,7 @@
 
 namespace Controllers;
 
+use DateTime;
 use Model\Productos;
 use MVC\Router;
 use Intervention\Image\ImageManagerStatic as Image;
@@ -15,7 +16,7 @@ class ProductosControllers{
     // Listar carta general por categorias
     public static function listar(Router $router){
         $inicio = false;
-        $categorias = Categorias::all();
+        $categorias = Categorias::allOrdenAlfa('categoria');
 
         $router->render('cartas/carta_general', [
             'inicio' => $inicio,
@@ -28,12 +29,19 @@ class ProductosControllers{
         $inicio = false;
         $id = validar0Redireccionar('/admin/carta_general');  
         $catego = Categorias::where_array('id', $id);
-        $productos = Productos::where('categoria', $catego->categoria);
+        $productos = Productos::whereOrderAlfa('categoria', $catego->categoria, 'titulo');
         
+        if(!$productos){
+            Productos::setAlerta('error', 'Lo sentimos, pero no hemos encontrado ofertas');
+        }
+
+        $alertas = Productos::getAlertas();
+
         $router->render('cartas/listado', [
             'inicio' => $inicio,
             'productos' => $productos,
-            'categorias' => $catego
+            'categorias' => $catego,
+            'alertas' => $alertas
 
         ]);
     }
@@ -42,9 +50,9 @@ class ProductosControllers{
     // Listar carta ofertas por categoria
     public static function carta_ofertas(Router $router){
         $inicio = false;
-        $categorias = Categorias::all();
+        $categorias = Categorias::allOrdenAlfa('categoria');
 
-        $router->render('/cartas/carta_ofertas', [
+        $router->render('cartas/carta_ofertas', [
             'inicio' => $inicio,
             'categoria' => $categorias
         ]);
@@ -54,12 +62,19 @@ class ProductosControllers{
         $inicio = false;
         $id = validar0Redireccionar('/admin/carta_ofertas');  
         $catego = Categorias::where_array('id', $id);
-        $productos = Productos::where('categoria', $catego->categoria);
+        $productos = Productos::allOrdenAlfaCartaOfertas('categoria', $catego->categoria, 'titulo');
         
+        if(!$productos){
+            Productos::setAlerta('error', 'Lo sentimos, pero no hemos encontrado ofertas');
+        }
+
+        $alertas = Productos::getAlertas();
+
         $router->render('/cartas/listado', [
             'inicio' => $inicio,
             'productos' => $productos,
-            'categorias' => $catego
+            'categorias' => $catego,
+            'alertas' => $alertas
 
         ]);
     }
@@ -67,11 +82,19 @@ class ProductosControllers{
     // Listar ofertas de temporada
     public static function listar_ofertas(Router $router){
         $inicio = false;
-        $ofertas = Ofertas::all();
+        $fecha =  date('Y/m/d');
+        $ofertas = Ofertas::allOrdenAlfaCartaOfertasporFecha('titulo', $fecha );
+
+        if(!$ofertas){
+            Ofertas::setAlerta('error', 'Lo sentimos, pero no hemos encontrado ofertas');
+        }
+
+        $alertas = Ofertas::getAlertas();
 
         $router->render('/ofertas/ofertas', [
             'inicio' => $inicio,
-            'ofertas' => $ofertas
+            'ofertas' => $ofertas,
+            'alertas' => $alertas
     ]);
 
 }
@@ -129,7 +152,6 @@ class ProductosControllers{
         $categorias = Categorias::all();
         $productos = new Productos();
         
-
         if($_SERVER['REQUEST_METHOD'] === 'POST'){
             $productos = new Productos($_POST['producto']);
             $categoria = new Categorias($_POST['categoria']);
@@ -147,7 +169,6 @@ class ProductosControllers{
             if(empty($alertas)){
                 
                 $imagen->save($carpeta . $nombreImagen);                         // Guarda la imagen en el disco duro con la libreria intervention
-
                 $productos->guardar();
          
                 header('Location: /admin/carta_general');

@@ -30,8 +30,6 @@ $_SESSION['imagen'] ?? false;
 
     <div class="dashboard">
 
-       
-
         <div class="contenedor_aside">
             <div class="conte_cabecera">
                 <div class="cabecera">
@@ -86,7 +84,9 @@ $_SESSION['imagen'] ?? false;
                             <span data-paso_menu="4"> Blog</span>
                         </div>
                         <nav class="navega-4">
-                            <a href="/admin/blog"><img src="/build/img/flecha-dr16-B.png" alt="">   Blog</a>
+                            <a href="/admin/blog"><img src="/build/img/flecha-dr16-B.png" alt="">   Comentarios</a>
+                            <a href="/admin/articulos/listar"><img src="/build/img/flecha-dr16-B.png" alt="">   Articulos</a>
+                            <a href="/admin/articulos/crear"><img src="/build/img/flecha-dr16-B.png" alt="">   Crea arti.</a>
                         </nav>
                             
                         <!-- paso 5 USUARIOS -->
@@ -95,9 +95,11 @@ $_SESSION['imagen'] ?? false;
                             <span data-paso_menu="5"> Usuarios</span>
                         </div>
                         <nav class="navega-5">
-                            <a href="/admin/blog"><img src="/build/img/flecha-dr16-B.png" alt="">   Usuarios</a>
+                            <a href="/user/listado"><img src="/build/img/flecha-dr16-B.png" alt="">   Usuarios</a>
+                            <a href="/user/ofertas"><img src="/build/img/flecha-dr16-B.png" alt="">   Ofertas</a>
+                            <a href="/user/email"><img src="/build/img/flecha-dr16-B.png" alt="">   Email</a>
                         </nav>
-                        
+
                         <!-- paso 5 -->
                         <div  data-paso_menu="6" class="menu_dash">
                             <img data-paso_menu="6" class="img_navega" src="/build/img/barras.svg" alt="Icono">
@@ -139,13 +141,14 @@ $_SESSION['imagen'] ?? false;
 
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/build/js/sweetalert2.js"></script>
     <script src="/build/js/dashboard.js"></script>
     <script src="/build/js/modernizr.js"></script>
         
     <script src="/build/js/datatable/jquery-3-6-4.js"></script>
     <script src="/build/js/datatable/datatables.js"></script>
-   
+    <script src="/build/js/eliminar.js"></script>
+    
     <?php echo $script ?? ''; ?>
 
 </body>

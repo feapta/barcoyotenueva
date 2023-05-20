@@ -7,6 +7,8 @@ if(!isset($_SESSION)){
 
 $auth = $_SESSION['login'] ?? false;
 $admin = $_SESSION['admin'] ?? false;
+$id_user = $_SESSION['id'] ?? false;
+$nombreSolo = $_SESSION['nombreSolo'];
 
 ?>
 
@@ -38,13 +40,16 @@ $admin = $_SESSION['admin'] ?? false;
                 </div>
 
                 <nav class="navegacion">
-                    <?php if($admin): ?>
-                        <a href="/dashboard">Admin</a>
+                    <?php if($admin === 'admin'): ?>
+                        <a href="/dashboard"><?php echo $nombreSolo?></a>
+                    <?php endif?>
+                    <?php if($admin === 'usuario'): ?>
+                        <a href="/usuarios_registrados?id=<?php echo $id_user?>"><?php echo $nombreSolo?></a>
                     <?php endif?>
                     <a href="/contacto">Contacto</a>
                     <a href="/nosotros">Nosotros</a>
                     <a href="/blog">Blog</a>
-                    <a href="/login">Usuarios</a>
+                    <a href="/login">Acceso</a>
                     <?php if($auth): ?>
                     <a href="/logout">Cerrar sesión</a>
                     <?php endif?>
@@ -59,13 +64,13 @@ $admin = $_SESSION['admin'] ?? false;
     <?php echo $contenido; ?>
         
 
-    <footer class="footer seccion">
+    <footer class="footer">
         <div class="contenedor contenedor_footer">
             <nav class="navegacion_footer">
                 <a href="/contacto">Contacto</a>
                 <a href="/nosotros">Nosotros</a>
                 <a href="/blog">Blog</a>
-                <a href="/login">Usuarios</a>
+                <a href="/login">Acceso</a>
             </nav>
         </div>
 
@@ -75,6 +80,8 @@ $admin = $_SESSION['admin'] ?? false;
         </div>
     </footer>
 
+
+    <script src="/build/js/sweetalert2.js"></script>
     <script src="/build/js/app.js"></script>
     <script src="/build/js/modernizr.js"></script>
     

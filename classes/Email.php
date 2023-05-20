@@ -12,7 +12,7 @@ class Email{
     public $email;
     public $nombre;
     public $token;
-
+    
     public function __construct($email, $nombre, $token) {
         $this->email = $email;
         $this->nombre = $nombre;
@@ -30,7 +30,7 @@ class Email{
             $mail->Host = 'smtp.ionos.es';                   // MAIL_HOST=sandbox.smtp.mailtrap.io
             $mail->SMTPAuth = true;
             $mail->Username = 'info@barcoyote.es';           // MAIL_USERNAME=476cbde3c5d651
-            $mail->Password = 'info@coyote2023';             // MAIL_PASSWORD=9d7e096386d412
+            $mail->Password = 'infocoyote120314mar';             // MAIL_PASSWORD=9d7e096386d412
             $mail->SMTPSecure = 'tls';                       // MAIL_ENCRYPTION=tls
             $mail->Port = 587;                               // MAIL_PORT=2525
                     
@@ -68,7 +68,7 @@ class Email{
             $mail->Host = 'smtp.ionos.es';
             $mail->SMTPAuth = true;
             $mail->Username = 'info@barcoyote.es';
-            $mail->Password = 'info@coyote2023';
+            $mail->Password = 'infocoyote120314mar';
             $mail->SMTPSecure = 'tls';
             $mail->Port = 587;
                     
@@ -83,7 +83,7 @@ class Email{
 
             $contenido = "<html>";
             $contenido .= "<p><strong>Hola " . $this->nombre . "</strong> Has solicitado restablecer el password, sigue el siguiente enlace: </p>";
-            $contenido .= "<p>Presione aqui: <a href='http://localhost:3000/recuperar?token=" . $this->token . "'>Restablecer</a>";
+            $contenido .= "<p>Presione aqui: <a href='http://localhost:3000/usuarios/recuperar?token=" . $this->token . "'>Restablecer</a>";
             $contenido .= "<p>Si no solicito esta cuenta, puede ignorar el mensaje </p>";
             $contenido .= "</html>";
 
@@ -97,7 +97,6 @@ class Email{
 
 
     }
-
 
 }
 

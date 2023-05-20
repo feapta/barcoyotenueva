@@ -2,7 +2,6 @@
 <!-- Pagina de contacto -->
 
     <div class="contenedor contenido_centrado contacto">
-        <h1>Contacto</h1>
    
         <div class="pedidos">
             <div class="imagen_pedidos">
@@ -23,7 +22,7 @@
         </div>
 
         <div class="local">
-            <h4>Nuestro local</h4>
+            <h4>Nuestras instalaciones</h4>
             <div class="imagenes_local">
                 <div class="img_A">
                     <img loading="lazy" src="build/img/local-4.webp" alt="">
@@ -37,9 +36,10 @@
         </div>
 
         <div class="mapa seccion">
-            <h4>Como llegar</h4>
+            <h4>Contacto</h4>
             <p>C/ Tercia, 51</p>
             <p>13420 - Malagón - Ciudad Real</p>
+            <p>Email: info@coyote.es</p>
 
 
             <div class="map">
