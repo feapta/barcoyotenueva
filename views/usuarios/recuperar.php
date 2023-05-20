@@ -15,7 +15,9 @@
             <input type="password" id="password" placeholder="Su nuevo password" name="password">
         </div>    
 
-        <input type="submit" class="boton_verde" value="Guardar nuevo password">
+        <div class="contenedor_botones">
+            <input type="submit" class="boton_verde" value="Guardar nuevo password">
+        </div>
     </form>
 
     <div class="acciones">

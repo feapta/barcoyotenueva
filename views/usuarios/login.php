@@ -16,12 +16,14 @@
                 <label for="password">Password</label>
                 <div class="mostrar_password">
                     <input type="password" id="password" name="password" placeholder="Password">
-                    <img id="ima-1" class="ocultar"src="/build/img/mostrar.webp" alt="">
+                    <img id="ima-1" class="ocultarPass"src="/build/img/mostrar.webp" alt="">
                     <img id="ima-2" src="/build/img/esconder.webp" alt="">
                 </div>
             </div>
 
-        <input type="submit" class="boton_verde" value="Iniciar Sesión">
+            <div class="contenedor_botones">
+                <input type="submit" class="boton_verde" value="Iniciar Sesión">
+            </div>
     </form>
 
     <div class="acciones">

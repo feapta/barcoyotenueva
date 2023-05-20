@@ -18,7 +18,9 @@
                 >
         </div>    
 
-        <input type="submit" class="boton_verde" value="Restablecer">
+        <div class="contenedor_botones">
+            <input type="submit" class="boton_verde" value="Restablecer">
+        </div>
     </form>
 
     <div class="acciones">

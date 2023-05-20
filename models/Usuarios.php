@@ -13,6 +13,7 @@ class Usuarios extends ActiveRecord {
     public $apellidos;
     public $email;
     public $password;
+    public $password2;
     public $telefono;
     public $imagen;
     public $recibir;
@@ -28,6 +29,7 @@ class Usuarios extends ActiveRecord {
         $this->apellidos = $args['apellidos'] ?? '';
         $this->email = $args['email'] ?? '';
         $this->password = $args['password'] ?? '';
+        $this->password2 = $args['password2'] ?? '';
         $this->telefono = $args['telefono'] ?? '';
         $this->imagen = $args['imagen'] ?? '';
         $this->recibir = $args['recibir'] ?? '0';
@@ -49,6 +51,9 @@ class Usuarios extends ActiveRecord {
         }
         if(!$this->password){
             self::$alertas['error'] [] = 'El password es obligatorio';
+        }
+        if($this->password != $this->password2){
+            self::$alertas['error'] [] = 'Los password no son iguales';
         }
         if(strlen($this->password) < 6 ){
             self::$alertas['error'] [] = 'El password debe contener al menos 6 caracteres';

@@ -20,11 +20,20 @@
         <div class="campo">
             <label for="password">Password</label>
             <div class="mostrar_password">
-                <input type="password" id="password" name="usuarios[password]" placeholder="Password">
-                <img id="muestra" src="/build/img/mostrar.webp" alt="">
-                <img id="oculta" src="/build/img/esconder.webp" alt="">
+                <input type="password" id="password" name="password" placeholder="Password">
+                <img id="ima-1" class="ocultarPass"src="/build/img/mostrar.webp" alt="">
+                <img id="ima-2" src="/build/img/esconder.webp" alt="">
             </div>
         </div>
+        <div class="campo">
+            <label for="password2">Password repetir</label>
+            <div class="mostrar_password">
+                <input type="password" id="password2" name="usuarios[password2]" placeholder="Password">
+                <img id="ima-3" class="ocultarPass"src="/build/img/mostrar.webp" alt="">
+                <img id="ima-4" src="/build/img/esconder.webp" alt="">
+            </div>
+        </div>
+
     <?php }?>
 
     <div class="campo">

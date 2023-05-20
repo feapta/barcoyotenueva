@@ -15,3 +15,5 @@
         <a href="/login">Volver</a>
     </div>
 </div>
+
+<?php  $script = '<script src="/build/js/mostrar_pass.js"></script>'; ?>

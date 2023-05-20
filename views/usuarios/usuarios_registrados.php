@@ -8,7 +8,7 @@
             <input type="hidden" id="nombre" name="califica[nombre]" value="<?php echo s($usuarios->nombre) ?>">
     <?php } ?>
         
-    <nav class="contenedor_botones">
+    <nav class="barraBotones">
         <button href="/usuarios_registrados" data-paso="1" >Perfil</button>
         <button data-paso="3" >Ofertas</button>
         <button data-paso="4" >Comentar</button>

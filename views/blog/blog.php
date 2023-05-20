@@ -1,6 +1,6 @@
 <!-- Blog listado de comentarios --> 
 
-<nav class="contenedor_botones">
+<nav class="barraBotones">
     <button data-paso="1" >Articulos</button>
     <button data-paso="2" >Comentarios</button>
     <button data-paso="3" >Comentar</button>
