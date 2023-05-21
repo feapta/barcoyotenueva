@@ -6,7 +6,7 @@
 
     <?php include_once __DIR__ . '/../templates/alertas.php'; ?>
 
-    <div class="acciones">
+    <div class="contenedor_botones">
         <a class="boton_verde" href="/login">Iniciar sesion</a>
     </div>
 </div>

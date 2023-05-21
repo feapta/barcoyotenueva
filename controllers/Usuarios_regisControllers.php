@@ -128,6 +128,7 @@ class Usuarios_regisControllers{
 
     // Dejar comentarios
     public static function dejar_user(){
+
         $carpeta = CARPETA_IMAGEN_COMENTARIOS;
 
         $califica = new Comentarios($_POST['califica']);
@@ -144,10 +145,56 @@ class Usuarios_regisControllers{
             $califica->guardar();
 
            header("Location: /usuarios_registrados?id=$id_usuario");
-        }
+    }
        
+    // Actualizar informacion de los usuarios desde el administrador
+    public static function actualizar_user(Router $router){
+        $id = validar0Redireccionar('/usuarios/listado');  
+        $usuarios = Usuarios::find($id);
+        $alertas = [];
 
-  
+        $router->render_dash('/usuarios/actualizar_user', [
+            'usuarios' => $usuarios,
+            'alertas' => $alertas
+        ]);
+    }
+    // Actualizar informacion de los usuarios desde el administrador
+    public static function actualizar_user_P(Router $router){
+        $carpeta = CARPETA_IMAGEN_USUARIOS;
+        $alertas = [];
+
+        if($_SERVER['REQUEST_METHOD'] === 'POST'){
+            $usuarios = Usuarios::find($_POST['usuarios']['id']);
+           
+            $args = $_POST['usuarios'];
+            $usuarios->sincronizar($args);
+            
+            $alertas = $usuarios->validar();                                // Validacion
+
+            $nombreImagen = md5( uniqid( rand(), true)) . ".jpg";           // Generar nombre unico para cada imagen
+            
+            if($_FILES['usuarios']['tmp_name']['imagen']){                  // Setear la imagen a la clase
+                $imagen = Image::make($_FILES['usuarios']['tmp_name']['imagen'])->resize(350, 250);
+                $usuarios->setImagen($nombreImagen, $carpeta);                                   
+                }
+            
+            if(empty($alertas)){                                             // Inserta el registro en la base de datos si no hay errores
+                if($_FILES['usuarios']['tmp_name']['imagen']){
+                    $imagen->save($carpeta . $nombreImagen);
+                }
+                    $usuarios->guardar();
+                    header("Location: /user/listado");
+                }
+        }
+
+        $router->render_dash('/dashboard', [
+            'alertas' => $alertas
+        ]);
+    }
+
+
+
 }
+
 
 ?>

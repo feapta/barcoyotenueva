@@ -111,6 +111,7 @@ $_SESSION['imagen'] ?? false;
                             <a href="/nosotros"><img src="/build/img/flecha-dr16-B.png" alt="">   Nosotros</a>
                             <a href="/blog"><img src="/build/img/flecha-dr16-B.png" alt="">   Blog</a>
                             <a href="/login"><img src="/build/img/flecha-dr16-B.png" alt="">   Usuarios</a>
+                            <a href=""></a>
                             <img class="dark_mode_boton" src="/build/img/dark-mode.svg" alt="">
                         </nav>
                     </div>
@@ -133,8 +134,9 @@ $_SESSION['imagen'] ?? false;
                 <img class="nav_dash" src="/build/img/barras.svg" alt="Icono navegacion resposive">
             </div>
 
+
             <div>
-                <?php echo $contenido_dash ?>
+                <?php echo $contenido_dash ?? '' ;?>
             </div>
 
         </div>
@@ -148,6 +150,7 @@ $_SESSION['imagen'] ?? false;
     <script src="/build/js/datatable/jquery-3-6-4.js"></script>
     <script src="/build/js/datatable/datatables.js"></script>
     <script src="/build/js/eliminar.js"></script>
+    <script src="/build/js/darkMode.js"></script>
     
     <?php echo $script ?? ''; ?>
 

@@ -82,8 +82,9 @@ $nombreSolo = $_SESSION['nombreSolo'];
 
 
     <script src="/build/js/sweetalert2.js"></script>
-    <script src="/build/js/app.js"></script>
+    <script src="/build/js/navegaResponsive.js"></script>
     <script src="/build/js/modernizr.js"></script>
+    <script src="/build/js/darkMode.js"></script>
     
     <?php echo $script ?? ''; ?>
 

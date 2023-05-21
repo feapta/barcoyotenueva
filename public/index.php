@@ -44,28 +44,6 @@ $router->post('/usuarios/olvidado', [UsuariosControllers::class, 'olvidado']);
 $router->get('/usuarios/recuperar', [UsuariosControllers::class, 'recuperar']);  
 $router->post('/usuarios/recuperar', [UsuariosControllers::class, 'recuperar']);  
 
-
-
-// USUARIOS REGISTRADOS
-$router->get('/usuarios_registrados', [Usuarios_regisControllers::class, 'usuarios_registrados']);  
-$router->post('/usuarios_registrados', [Usuarios_regisControllers::class, 'usuarios_registrados']); 
-
-$router->get('/user/listado', [Usuarios_regisControllers::class, 'listar_user']);  
-$router->post('/user/listado_P', [Usuarios_regisControllers::class, 'listar_user_P']); 
-
-$router->get('/user/ofertas', [Usuarios_regisControllers::class, 'listar_ofertas_user']);  
-$router->post('/user/ofertas_P', [Usuarios_regisControllers::class, 'listar_ofertas_user_P']);
-
-$router->get('/user/crear_ofertas', [Usuarios_regisControllers::class, 'crear_ofertas_user']);  
-$router->post('/user/crear_ofertas', [Usuarios_regisControllers::class, 'crear_ofertas_user']); 
-
-$router->get('/user/email', [Usuarios_regisControllers::class, 'email_user']);  
-$router->post('/user/email_P', [Usuarios_regisControllers::class, 'email_user_P']); 
- 
-$router->post('/user/dejar', [Usuarios_regisControllers::class, 'dejar_user']);  
-$router->post('/user/enviar_mail', [Usuarios_regisControllers::class, 'enviar_mail']);  
-
-
 // Cartas
 $router->get('/ofertas', [ProductosControllers::class, 'listar_ofertas']);   
 
@@ -76,6 +54,8 @@ $router->post('/cartaOfertasPost', [ProductosControllers::class, 'carta_ofertas_
 $router->get('/carta_general', [ProductosControllers::class, 'listar']);    
 $router->get('/cartas/listado', [ProductosControllers::class, 'listar_post']);
 $router->post('/cartas/listado', [ProductosControllers::class, 'listar_post']);
+
+
 
 
 // Administracion   ////////////////////////////////////////////////////////////////
@@ -126,6 +106,31 @@ $router->post('/admin/articulos/actualizar', [BlogControllers::class, 'actualiza
 $router->get('/blog', [BlogControllers::class, 'blog']);   
 $router->get('/dejar', [BlogControllers::class, 'dejar']);   
 $router->post('/dejar', [BlogControllers::class, 'dejar']);   
+
+// Usuarios
+$router->get('/usuarios_registrados', [Usuarios_regisControllers::class, 'usuarios_registrados']);  
+$router->post('/usuarios_registrados', [Usuarios_regisControllers::class, 'usuarios_registrados']); 
+
+$router->get('/user/listado', [Usuarios_regisControllers::class, 'listar_user']);  
+$router->post('/user/listado_P', [Usuarios_regisControllers::class, 'listar_user_P']); 
+
+$router->get('/user/actualizar', [Usuarios_regisControllers::class, 'actualizar_user']); 
+$router->post('/user/actualizar_P', [Usuarios_regisControllers::class, 'actualizar_user_P']); 
+
+$router->get('/user/ofertas', [Usuarios_regisControllers::class, 'listar_ofertas_user']);  
+$router->post('/user/ofertas_P', [Usuarios_regisControllers::class, 'listar_ofertas_user_P']);
+
+$router->get('/user/crear_ofertas', [Usuarios_regisControllers::class, 'crear_ofertas_user']);  
+$router->post('/user/crear_ofertas', [Usuarios_regisControllers::class, 'crear_ofertas_user']); 
+
+$router->get('/user/email', [Usuarios_regisControllers::class, 'email_user']);  
+$router->post('/user/email_P', [Usuarios_regisControllers::class, 'email_user_P']); 
+ 
+$router->post('/user/dejar', [Usuarios_regisControllers::class, 'dejar_user']);  
+
+$router->post('/user/enviar_mail', [Usuarios_regisControllers::class, 'enviar_mail']);  
+
+
 
 // Comprueba y valida las rutas, que existan y les asigna las funciones del Controlador
 $router->comprobarRutas();

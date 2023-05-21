@@ -19,28 +19,6 @@
         <input type="email" id="email" name="usuarios[email]" placeholder="Email" value=<?php echo s($usuarios->email); ?>>
     </div>
     
-    <!-- Muestra el campo de password si no hay un ID -->
-    <?php if(!$usuarios->id) { ?>
-        <div class="campo">
-            <label for="password">Password</label>
-            <div class="mostrar_password">
-                <input type="password" id="password" name="password" placeholder="Password">
-                <img id="ima-1" class="ocultarPass"src="/build/img/mostrar.webp" alt="">
-                <img id="ima-2" src="/build/img/esconder.webp" alt="">
-            </div>
-        </div>
-        <div class="campo">
-            <label for="password2">Password repetir</label>
-            <div class="mostrar_password">
-                <input type="password" id="password2" name="usuarios[password2]" placeholder="Password">
-                <img id="ima-3" class="ocultarPass"src="/build/img/mostrar.webp" alt="">
-                <img id="ima-4" src="/build/img/esconder.webp" alt="">
-            </div>
-        </div>
-
-    <?php }?>
-    <!-- fin -->
-
     <div class="campo">
         <label for="telefono">Teléfono</label>
         <input type="number" id="telefono" name="usuarios[telefono]" placeholder="Teléfono" value=<?php echo s($usuarios->telefono); ?>>
@@ -62,15 +40,8 @@
         <?php } ?>
     </div>
 
-    <?php if($usuarios->id) { ?>
-        <div class="botones_usuarios">
-            <input type="submit" class="boton_verde mostrar_boton"  value="Guardar" >
-            <input type="button" class="boton_verde cambioPassword" value="Cambiar password">
-            <input type="button" class="boton_rojo eliminarCuenta"  value="Eliminar su cuenta">
-        </div>
-    <?php } else { ?>
-        <div class="contenedor_botones">
-            <input type="submit" value="Registro" class="boton_verde">
-        </div>
-    <?php }?>
+    <div class="contenedor_botones">
+        <input type="submit" class="boton_verde mostrar_boton"  value="Guardar" >
+    </div>
+
 

@@ -96,7 +96,7 @@ class UsuariosControllers{
                     $imagen->save($carpeta . $nombreImagen);                                            // Guarda la imagen en el disco duro con la libreria intervention
                     
                     $email = new Email($usuarios->email, $usuarios->nombre, $usuarios->token);          // Envio email
-                    //$email->enviarConfirmacion();
+                    $email->enviarConfirmacion();
                     $resultado = $usuarios->guardar();                                                  // Crear usuario
 
                     if($resultado){
@@ -229,7 +229,6 @@ class UsuariosControllers{
         $alertas = [];
         $carpeta = CARPETA_IMAGEN_USUARIOS;
         $usuarios = new Usuarios;
-
         if($_SERVER['REQUEST_METHOD'] === 'POST'){
             $usuarios = Usuarios::find($_POST['usuarios']['id']);
             $args = $_POST['usuarios'];
@@ -254,7 +253,7 @@ class UsuariosControllers{
              }
         }
 
-         $router->render_dash('/usuarios/usuarios_registrados', [
+         $router->render('/usuarios/usuarios_registrados', [
             'usuarios' => $usuarios,
             'alertas' => $alertas
         ]);

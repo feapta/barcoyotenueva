@@ -3,9 +3,7 @@
     
     <!-- Campos ocultos -->
     <?php if($usuarios->id) { ?>
-            <input type="hidden" id="id" name="usuarios[id]" value="<?php echo s($usuarios->id); ?>">
             <input type="hidden" id="regis" name="califica[regis]" value="<?php echo s($usuarios->confirmado) ?>">
-            <input type="hidden" id="nombre" name="califica[nombre]" value="<?php echo s($usuarios->nombre) ?>">
     <?php } ?>
         
     <nav class="barraBotones">

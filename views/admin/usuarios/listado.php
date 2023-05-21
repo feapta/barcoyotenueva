@@ -16,6 +16,7 @@
                     <th>Recibe</th>
                     <th>Creada</th>
                     <th></th>
+                    <th></th>
                 </tr>
             </thead>
 

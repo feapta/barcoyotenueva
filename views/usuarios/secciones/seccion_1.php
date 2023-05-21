@@ -22,6 +22,9 @@
                     <img id="ima-2" src="/build/img/esconder.webp" alt="">
                 </div>
             </div>
-            <input type="submit" value="Guardar" class="boton_verde">
+
+            <div class="contenedor_botones">
+                <input type="submit" value="Guardar" class="boton_verde">
+            </div>
         </form>
     </div>

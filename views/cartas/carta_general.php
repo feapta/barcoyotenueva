@@ -6,7 +6,7 @@
     <h3>Carta general</h3>
     <p>Aqui les presentamos los productos que siempre nos acompañan.</p>
     
-    <div class="contenedorBotones">
+    <div class="contenedor_botones">
         <a href="/" class="boton_verde volver" type="submit">Volver</a>
     </div>
     
@@ -21,7 +21,7 @@
         <?php } ?>
     </ul>
 
-    <div class="contenedorBotones">
+    <div class="contenedor_botones">
         <a href="" class="boton_verde" type="submit">Volver</a>
     </div>
 </div>
