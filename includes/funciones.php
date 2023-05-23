@@ -1,7 +1,5 @@
 <?php
 
-use GuzzleHttp\Psr7\Message;
-
 define('TEMPLATES_URL', __DIR__ . '/templates');        // Super global de php para que busque la ruta al archivo
 define('FUNCIONES_URL',  __DIR__ . 'funciones.php');
 define('CARPETA_IMAGEN_USUARIOS', $_SERVER['DOCUMENT_ROOT']. '/imagenes_usuarios/');
