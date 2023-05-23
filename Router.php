@@ -3,6 +3,7 @@
 namespace MVC;
 
 class Router {
+
     public array $getRoutes = [];
     public array $postRoutes = [];
 
@@ -57,7 +58,6 @@ class Router {
         $contenido = ob_get_clean();                    // Limpia el Buffer
         include_once __DIR__ . '/views/master.php';     // Pagina maestra que muestra el contenido de la variable contenido
     }
-
 
 
     // Muestra las paginas del dashboard
