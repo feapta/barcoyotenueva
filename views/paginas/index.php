@@ -41,7 +41,7 @@
             </div>
             <div class="conteImg">
                 <a href="/carta_general">
-                    <img loading="lazy" src="/build/img/carta.webp" alt="Carta principal">
+                    <img loading="lazy" src="/build/img/Carta.webp" alt="Carta principal">
                 </a>
             </div>
             <div class="conteBoton">
