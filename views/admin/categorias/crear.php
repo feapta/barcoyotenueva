@@ -13,7 +13,9 @@
             
             <?php include __DIR__ . '/formulario.php'; ?>
             
-            <input type="submit" value="Enviar" class="boton_verde">
+            <div class="contenedo_botones">
+                <input type="submit" value="Enviar" class="boton_verde">
+            </div>
         </form>
     </div>
     

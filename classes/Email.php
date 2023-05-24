@@ -45,7 +45,7 @@ class Email{
 
             $contenido = "<html>";
             $contenido .= "<p><strong>Hola " . $this->nombre . "</strong> has creado tu cuenta en el Bar Coyote, solo debes confirmarla presionando en el siguiente enlace: </p>";
-            $contenido .= "<p>Presione aqui: <a href='http://localhost:3000/confirmar?token=" . $this->token . "'>Confirmar cuenta</a>";
+            $contenido .= "<p>Presione aqui: <a href='http://barcoyote.es/confirmar?token=" . $this->token . "'>Confirmar cuenta</a>";
             $contenido .= "<p>Si no solicito esta cuenta, puede ignorar el mensaje </p>";
             $contenido .= "</html>";
 
@@ -83,7 +83,7 @@ class Email{
 
             $contenido = "<html>";
             $contenido .= "<p><strong>Hola " . $this->nombre . "</strong> Has solicitado restablecer el password, sigue el siguiente enlace: </p>";
-            $contenido .= "<p>Presione aqui: <a href='http://localhost:3000/usuarios/recuperar?token=" . $this->token . "'>Restablecer</a>";
+            $contenido .= "<p>Presione aqui: <a href='http://barcoyote.es/usuarios/recuperar?token=" . $this->token . "'>Restablecer</a>";
             $contenido .= "<p>Si no solicito esta cuenta, puede ignorar el mensaje </p>";
             $contenido .= "</html>";
 

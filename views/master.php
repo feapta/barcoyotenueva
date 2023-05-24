@@ -8,7 +8,7 @@ if(!isset($_SESSION)){
 $auth = $_SESSION['login'] ?? false;
 $admin = $_SESSION['admin'] ?? false;
 $id_user = $_SESSION['id'] ?? false;
-$nombreSolo = $_SESSION['nombreSolo'];
+$nombreSolo = $_SESSION['nombreSolo'] ?? '';
 
 ?>
 

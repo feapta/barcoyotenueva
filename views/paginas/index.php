@@ -26,7 +26,7 @@
 
             <div class="conteImg">
                 <a href="/carta_ofertas" >
-                    <img loading="lazy" src="/build/img/carta_ofertas.webp" alt="Carta ofertas">
+                    <img loading="lazy" src="/build/img/Carta_ofertas.webp" alt="Carta ofertas">
                 </a>
             </div>
 
@@ -41,7 +41,7 @@
             </div>
             <div class="conteImg">
                 <a href="/carta_general">
-                    <img loading="lazy" src="/build/img/Carta.webp" alt="Carta principal">
+                    <img loading="lazy" src="/build/img/carta.webp" alt="Carta principal">
                 </a>
             </div>
             <div class="conteBoton">

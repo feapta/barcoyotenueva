@@ -5,7 +5,7 @@
     <p>Rellene el formulario y dejenos sus comentarios.</p>
 
     <form class="contenedor_formulario" method="POST" action="/dejar" enctype="multipart/form-data">
-        <input type="hidden" name="califica[id_usuario]" value="6">
+        <input type="hidden" name="califica[id_usuario]" value="1">
 
             <div class="campo">
                 <label for="nombre">Nombre</label>

@@ -1,13 +1,13 @@
 <?php
 
-define('TEMPLATES_URL', __DIR__ . '/templates');        // Super global de php para que busque la ruta al archivo
+define('TEMPLATES_URL', __DIR__ . 'templates');        // Super global de php para que busque la ruta al archivo
 define('FUNCIONES_URL',  __DIR__ . 'funciones.php');
-define('CARPETA_IMAGEN_USUARIOS', $_SERVER['DOCUMENT_ROOT']. '/imagenes_usuarios/');
-define('CARPETA_IMAGEN_CATEGORIAS', $_SERVER['DOCUMENT_ROOT']. '/imagenes_categorias/');
-define('CARPETA_IMAGEN_OFERTAS', $_SERVER['DOCUMENT_ROOT']. '/imagenes_ofertas/');
-define('CARPETA_IMAGEN_CARTAS', $_SERVER['DOCUMENT_ROOT']. '/imagenes_cartas/');
-define('CARPETA_IMAGEN_COMENTARIOS', $_SERVER['DOCUMENT_ROOT']. '/imagenes_comentarios/');
-define('CARPETA_IMAGEN_ARTICULOS', $_SERVER['DOCUMENT_ROOT']. '/imagenes_articulos/');
+define('CARPETA_IMAGEN_USUARIOS', $_SERVER['DOCUMENT_ROOT']. '/public/imagenes_usuarios/');
+define('CARPETA_IMAGEN_CATEGORIAS', $_SERVER['DOCUMENT_ROOT']. '/public/imagenes_categorias/');
+define('CARPETA_IMAGEN_OFERTAS', $_SERVER['DOCUMENT_ROOT']. '/public/imagenes_ofertas/');
+define('CARPETA_IMAGEN_CARTAS', $_SERVER['DOCUMENT_ROOT']. '/public/imagenes_cartas/');
+define('CARPETA_IMAGEN_COMENTARIOS', $_SERVER['DOCUMENT_ROOT']. '/public/imagenes_comentarios/');
+define('CARPETA_IMAGEN_ARTICULOS', $_SERVER['DOCUMENT_ROOT']. '/public/imagenes_articulos/');
 
 
 // Se recomienda hacer uso de los tipos de datos
