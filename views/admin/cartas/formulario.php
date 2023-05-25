@@ -5,13 +5,13 @@
         <div class="campo">
             <label for="nombre">Categoría</label>
                 <select name="producto[categoria]" id="categoria">
-             
-               
+                           
                         <!-- crear -->
                     <?php if(!$productos->id) { ?>
                         <option value="">Seleccione</option>
 
                         <?php foreach($categorias as $cate) : ?>
+                            <?php echo $productos->categoria === $cate->categoria ? 'selected' : ''; ?>
                             <option value="<?php echo s($cate->categoria) ?>"> <?php echo $cate->categoria?></option>
                         <?php endforeach?>
 

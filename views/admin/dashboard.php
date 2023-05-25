@@ -152,7 +152,7 @@
     <script src="/build/js/eliminar.js"></script>
     <script src="/build/js/darkMode.js"></script>
     
-    <?php echo $script ?? ''; ?>
+    <?php echo $script ?? '' ; ?>
 
 </body>
 </html>
