@@ -147,7 +147,7 @@ class Usuarios_regisControllers{
                 
                 $ofertas->guardar();
             
-                header('Location: /usearios/ofertas/ofertas');
+                header('Location: /usuarios/ofertas/ofertas');
             }
         }
 
