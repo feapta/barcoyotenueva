@@ -153,8 +153,6 @@ class ProductosControllers{
             
             if($_SERVER['REQUEST_METHOD'] === 'POST'){
                 $productos = new Productos($_POST['producto']);
-                $categoria = new Categorias($_POST['categoria']);
-                $productos->categoria = $categoria->id;
 
                 // Seccion para subir imagenes
                 $nombreImagen = md5( uniqid( rand(), true)) . ".jpg";
