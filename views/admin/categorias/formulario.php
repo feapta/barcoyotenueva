@@ -4,8 +4,8 @@
 
 <div class="categorias">
     <div class="campo">
-        <label for="categorias">Categoría</label>
-        <input type="text" id="categorias" name="categorias[categoria]" placeholder="Categoria" value="<?php echo s($categorias->categoria); ?>">
+        <label for="categorias">Familia</label>
+        <input type="text" id="categorias" name="categorias[categoria]" placeholder="Familia" value="<?php echo s($categorias->categoria); ?>">
     </div>
 
     <div class="campo">

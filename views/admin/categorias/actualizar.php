@@ -11,7 +11,7 @@
     </div>
     
     <div class="contenedor_formulario">
-        <form class="formulario" method="POST" action="/admin/categorias/actualizar" enctype="multipart/form-data">
+        <form class="formulario" method="POST" enctype="multipart/form-data">
 
              <?php include __DIR__ . '/formulario.php'; ?>
 

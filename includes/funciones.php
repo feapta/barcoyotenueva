@@ -1,7 +1,7 @@
 <?php
 
-define('TEMPLATES_URL', __DIR__ . 'templates');        // Super global de php para que busque la ruta al archivo
-define('FUNCIONES_URL',  __DIR__ . 'funciones.php');
+define('TEMPLATES_URL', __DIR__ . '/templates');        // Super global de php para que busque la ruta al archivo
+define('FUNCIONES_URL',  __DIR__ . '/funciones.php');
 
 define('CARPETA_IMAGEN_USUARIOS', $_SERVER['DOCUMENT_ROOT']. '/public/imagenes_usuarios/');
 define('CARPETA_IMAGEN_CATEGORIAS', $_SERVER['DOCUMENT_ROOT']. '/public/imagenes_categorias/');

@@ -93,7 +93,6 @@ class CategoriasControllers{
 
              // Inserta el registro en la base de datos si no hay errores
             if(empty($alertas)){
-
                 if($_FILES['categorias']['tmp_name']['imagen']){
                     $imagen->save($carpeta . $nombreImagen);
                 }
