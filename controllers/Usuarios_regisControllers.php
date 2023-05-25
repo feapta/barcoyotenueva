@@ -56,7 +56,7 @@ class Usuarios_regisControllers{
     }
     
     // Crear ofertas para usuarios registrados
-    public static function crear_ofertas_user(Router $router){
+    public static function userCrearOfertas(Router $router){
         $alertas = [];
         $ofertas = new Ofertas_user();
         $carpeta = CARPETA_IMAGEN_OFERTAS;
@@ -82,7 +82,7 @@ class Usuarios_regisControllers{
             }
         }
 
-        $router->render_dash('/usuarios/crear', [
+        $router->render_dash('/user/crearOfertas', [
             'alertas' => $alertas,
 
         ]);

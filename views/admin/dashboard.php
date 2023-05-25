@@ -92,7 +92,7 @@ $_SESSION['imagen'] ?? false;
                         </div>
                         <nav class="navega-5">
                             <a href="/user/listado"><img src="/build/img/flecha-dr16-B.png" alt="">   Usuarios</a>
-                            <a href="/user/ofertas"><img src="/build/img/flecha-dr16-B.png" alt="">   Ofertas</a>
+                            <a href="/user/ofertas/ofertas"><img src="/build/img/flecha-dr16-B.png" alt="">   Ofertas</a>
                             <a href="/user/email"><img src="/build/img/flecha-dr16-B.png" alt="">   Email</a>
                         </nav>
 
