@@ -16,8 +16,7 @@
 
                     <?php foreach($categorias as $cate) : ?>
                         <option 
-                            <?php echo $cate->categoria === $productos->categoria ? 'selected' : ''; ?>
-                            value="<?php echo s($productos->categoria);?>"> <?php echo $cate->categoria?>
+                            value="<?php echo s($productos->categoria);?>">
                         </option>
                     <?php endforeach?>
                 </select>
