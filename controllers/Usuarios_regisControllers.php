@@ -189,7 +189,7 @@ class Usuarios_regisControllers{
         }
 
         $router->render_dash('/usuarios/ofertas/actualizar', [
-            'oferta' => $ofertas,
+            'ofertas' => $ofertas,
             'alertas' => $alertas
         ]);
     }
