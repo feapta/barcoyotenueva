@@ -19,31 +19,21 @@ class Router {
 
     // Comprobar rutas
     public function comprobarRutas() {
-        // Proteger Rutas...
-        // session_start();
-
-        // Arreglo de rutas protegidas...
-        // $rutas_protegidas = ['/admin', '/propiedades/crear', '/propiedades/actualizar', '/propiedades/eliminar', '/vendedores/crear', '/vendedores/actualizar', '/vendedores/eliminar'];
-
-        // $auth = $_SESSION['login'] ?? null;
-   
-       // $currentUrl = $_SERVER['PATH_INFO'] ?? '/';
-        $currentUrl = $_SERVER['REQUEST_URI'] === '' ? '/' :  $_SERVER['REQUEST_URI'];
+        $urlActual = explode('?', $_SERVER['REQUEST_URI'], 2) ?? '/';
         $method = $_SERVER['REQUEST_METHOD'];
 
-        if ($method === 'GET') {
-            $fn = $this->getRoutes[$currentUrl] ?? null;
-        } else {
-            $fn = $this->postRoutes[$currentUrl] ?? null;
-        }
+      if ($method === 'GET') {
+          $fn = $this->getRoutes[$urlActual[0]] ?? null;
+      } else {
+          $fn = $this->postRoutes[$urlActual[0]] ?? null;
+      }
 
-        if ( $fn ) {                            // Call user fn va a llamar una función cuando no sabemos cual sera
-            call_user_func($fn, $this);         // This es para pasar argumentos
-            
-        } else {
-            echo "Página No Encontrada o Ruta no válida";
-        }
-    }
+      if ( $fn ) {                            // Call user fn va a llamar una función cuando no sabemos cual sera
+          call_user_func($fn, $this);         // This es para pasar argumentos
+      } else {
+          echo "Página no encontrada o ruta no valida";
+      }
+  }
 
     // Muestra las paginas
     public function render($view, $datos = []){

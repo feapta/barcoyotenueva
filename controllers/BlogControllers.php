@@ -60,7 +60,7 @@ class BlogControllers{
             }
          }
 
-         $router->render('/blog', [
+         $router->render('/blog/blog', [
              'inicio' => $inicio,
              'califica' => $comentario,
              'alertas' => $alertas         

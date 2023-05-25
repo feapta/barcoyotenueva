@@ -7,7 +7,7 @@
     <?php include_once __DIR__ . "/../../templates/alertas.php" ?>
 
     <form class="contenedor_formulario" method="POST" action="/user/crear_ofertas" enctype="multipart/form-data">
-        <?php include __DIR__ . '/../../templates/formulario.php'; ?>
+        <?php include __DIR__ . '/formulario.php'; ?>
 
         <div class="botones">
             <input type="submit" value="Guardar" class="boton_verde">

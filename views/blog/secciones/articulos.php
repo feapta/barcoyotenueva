@@ -6,7 +6,7 @@
                 <div class="articulo">
                     <h5><?php echo $articulo->titulo;    ?></h5>
                     <img loading="lazy" src="/imagenes_articulos/<?php echo $articulo->imagen; ?>" alt="Imagen">
-                    <p><?php echo $articulo->parrafo;    ?></p>
+                    <p class="parrafo"><?php echo $articulo->parrafo;    ?></p>
                     <p><?php echo $articulo->creada;    ?></p>
                 </div>
             </li>

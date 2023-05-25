@@ -8,7 +8,7 @@
     
     <form class="contenedor_formulario" method="POST"  action="/user/actualizar_P" enctype="multipart/form-data">
 
-        <?php include __DIR__ . '../formulario.php'; ?>
+        <?php include __DIR__ . '/formulario.php'; ?>
 
     </form>
 </div>
