@@ -131,6 +131,7 @@ $router->post('/user/ofertas_P', [Usuarios_regisControllers::class, 'listar_ofer
 $router->get('/user/crearOfertas', [Usuarios_regisControllers::class, 'userCrearOfertas']);  
 $router->post('/user/crearOfertas', [Usuarios_regisControllers::class, 'userCrearOfertas']); 
 
+$router->get('/user/actualizarOferta', [Usuarios_regisControllers::class, 'userActualizarOferta']); 
 $router->post('/user/actualizarOferta', [Usuarios_regisControllers::class, 'userActualizarOferta']); 
 
 
