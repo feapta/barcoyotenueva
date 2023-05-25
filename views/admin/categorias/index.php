@@ -7,7 +7,6 @@
 
     <div class="contenedor_botones">
         <a href="/admin/categorias/crear" class="boton_verde ">Crear categoría</a>
-        <a href="/admin/categorias" class="boton_verde ">Volver</a>
     </div>
     
     <div class="contenedor_tabla">
