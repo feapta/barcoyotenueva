@@ -151,7 +151,7 @@ class Usuarios_regisControllers{
             }
         }
 
-        $router->render_dash('/usurios/ofertas/crear', [
+        $router->render_dash('/usuarios/ofertas/crear', [
             'alertas' => $alertas,
 
         ]);
@@ -188,7 +188,7 @@ class Usuarios_regisControllers{
             }
         }
 
-        $router->render_dash('/usuarios/ofertas', [
+        $router->render_dash('/usuarios/ofertas/actualizar', [
             'oferta' => $ofertas,
             'alertas' => $alertas
         ]);
