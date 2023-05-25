@@ -13,9 +13,7 @@
                     <option value="<?php echo s($productos->categoria); ?>"> <?php echo $productos->categoria; ?> </option>
                 <?php }?>
 
-                <?php foreach($categorias as $cate) { ?>
-                    <option value="<?php echo s($productos->categoria); ?>"> <?php echo $productos->categoria; ?> </option>
-                <?php }?>
+                    <option value="Bocadillos"> <?php echo $cate->categoria; ?></option>
             </select>
            
         </div>
