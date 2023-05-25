@@ -11,11 +11,11 @@
                         <option value="">-- Seleccione --</option>
                     <?php }else { ?>
                         <!-- Actualizar -->
-                        <option value="<?php echo s($productos->categoria); ?>"> <?php echo $productos->categoria; ?></option>
+                        <option value="<?php echo s($productos->categoria); ?>"> <?php echo $cate->categoria; ?> </option>
                     <?php }?>
 
                     <?php foreach($categorias as $cate) : ?>
-                        <option value="<?php echo s($cate->categoria); ?>"> <?php echo $cate->categoria; ?></option>
+                        <option value="<?php echo s($productos->categoria); ?>"> <?php echo $cate->categoria; ?></option>
                     <?php endforeach?>
                 </select>
            
