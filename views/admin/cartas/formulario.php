@@ -8,11 +8,13 @@
                            
                         <!-- crear -->
                     <?php if(!$productos->id) { ?>
-                        <option value="">Seleccione</option>
+                        <option value="">-- Seleccione --</option>
 
                         <?php foreach($categorias as $cate) : ?>
-                            <?php echo $productos->categoria === $cate->categoria ? 'selected' : ''; ?>
-                            <option value="<?php echo s($cate->categoria) ?>"> <?php echo $cate->categoria?></option>
+                            <option
+                                <?php echo $productos->categoria === $cate->categoria ? 'selected' : ''; ?>
+                                value="<?php echo s($cate->categoria) ?>"> <?php echo $cate->categoria?>
+                             </option>
                         <?php endforeach?>
 
                     <?php }else { ?>
