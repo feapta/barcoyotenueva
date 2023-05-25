@@ -1,10 +1,14 @@
 
 <?php
+    if(!isset($_SESSION)){
+        session_start();
+    }
 
-$auth = $_SESSION['login'] ?? false;
-$_SESSION['nombre'] ?? false;
-$_SESSION['imagen'] ?? false;
-
+    $auth = $_SESSION['login'] ?? false;
+    $_SESSION['nombre'] ?? false;
+    $_SESSION['imagen'] ?? false;
+    $nombreSolo = $_SESSION['nombreSolo'] ?? '';
+    
 ?>
 
 <!-- Pagina principal de administracion -->

@@ -2,6 +2,7 @@
 
 define('TEMPLATES_URL', __DIR__ . 'templates');        // Super global de php para que busque la ruta al archivo
 define('FUNCIONES_URL',  __DIR__ . 'funciones.php');
+
 define('CARPETA_IMAGEN_USUARIOS', $_SERVER['DOCUMENT_ROOT']. '/public/imagenes_usuarios/');
 define('CARPETA_IMAGEN_CATEGORIAS', $_SERVER['DOCUMENT_ROOT']. '/public/imagenes_categorias/');
 define('CARPETA_IMAGEN_OFERTAS', $_SERVER['DOCUMENT_ROOT']. '/public/imagenes_ofertas/');
@@ -10,7 +11,6 @@ define('CARPETA_IMAGEN_COMENTARIOS', $_SERVER['DOCUMENT_ROOT']. '/public/imagene
 define('CARPETA_IMAGEN_ARTICULOS', $_SERVER['DOCUMENT_ROOT']. '/public/imagenes_articulos/');
 
 
-// Se recomienda hacer uso de los tipos de datos
 function incluirTemplate(string $nombre, bool $inicio = false ){
     include TEMPLATES_URL . "/{$nombre}.php";
 };

@@ -47,11 +47,13 @@ $router->post('/usuarios/recuperar', [UsuariosControllers::class, 'recuperar']);
 // Cartas
 $router->get('/ofertas', [ProductosControllers::class, 'listar_ofertas']);   
 
-$router->get('/carta_ofertas', [ProductosControllers::class, 'carta_ofertas']);   
+$router->get('/carta_ofertas', [ProductosControllers::class, 'carta_ofertas']);
+
 $router->get('/cartaOfertasPost', [ProductosControllers::class, 'carta_ofertas_post']);   
 $router->post('/cartaOfertasPost', [ProductosControllers::class, 'carta_ofertas_post']);   
 
-$router->get('/carta_general', [ProductosControllers::class, 'listar']);    
+$router->get('/carta_general', [ProductosControllers::class, 'listar']); 
+   
 $router->get('/cartas/listado', [ProductosControllers::class, 'listar_post']);
 $router->post('/cartas/listado', [ProductosControllers::class, 'listar_post']);
 
