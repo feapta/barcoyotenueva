@@ -3,19 +3,22 @@
 
 <div class="head_formulario">
         <div class="campo">
-            <label for="nombre">Categoría</label>
+            <label for="nombre">Familia</label>
                 <select name="producto[categoria]" id="categoria">
                         
                         <!-- crear -->
                     <?php if(!$productos->id) { ?>
-                        <option value="">Seleccione</option>
+                        <option value="">-- Seleccione --</option>
                     <?php }else { ?>
                         <!-- Actualizar -->
                         <option value="<?php echo s($productos->categoria);?>"><?php echo $productos->categoria;?></option>
                     <?php }?>
 
                     <?php foreach($categorias as $cate) : ?>
-                        <option value="<?php echo s($cate->categoria) ?>"> <?php echo $cate->categoria?></option>
+                        <option 
+                            <?php echo $productos->categoria === $cate->categoria ? 'selected' : ''; ?>
+                            value="<?php echo s($cate->categoria) ?>"> <?php echo $cate->categoria?>
+                        </option>
                     <?php endforeach?>
                 </select>
            
@@ -28,7 +31,7 @@
                 <?php if($productos->id) { ?>
                     <option value=<?php echo s($productos->oferta); ?> selected><?php if($productos->oferta === '1') { echo "Si";} else { echo "No";}?></option>
                 <?php }else { ?>
-                    <option value="">Seleccione</option>
+                    <option value="">-- Seleccione --</option>
                 <?php }?>
                 
                 <option value="0">No</option>
@@ -52,7 +55,7 @@
             <?php if($productos->id) { ?>
                     <option value=<?php echo s($productos->media); ?> selected><?php if($productos->media === '1') { echo "Si";} else { echo "No";}?></option>
                 <?php }else { ?>
-                    <option value="">Seleccione</option>
+                    <option value="">-- Seleccione --</option>
                 <?php }?>
                 
                 <option value="0">No</option>
