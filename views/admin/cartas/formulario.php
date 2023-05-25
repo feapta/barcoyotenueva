@@ -3,17 +3,10 @@
 
 <div class="head_formulario">
         <div class="campo">
-            <label for="nombre">Familia</label>
-                <select name="producto[categoria]" id="categoria">
-                        
-                        <!-- crear -->
-                    <?php if(!$productos->id) { ?>
-                        <option value="">-- Seleccione --</option>
-                    <?php }else { ?>
-                        <!-- Actualizar -->
-                        <option value="<?php echo s($productos->categoria); ?>"> <?php echo $productos->categoria; ?> </option>
-                    <?php }?>
-
+            <label for="familia">Familia</label>
+                <select name="producto[categoria]" id="familia">
+            
+                    <option value="">-- Seleccione --</option>
                     <?php foreach($categorias as $cate) : ?>
                         <option value="<?php echo s($cate->categoria); ?>"> <?php echo $cate->categoria; ?></option>
                     <?php endforeach?>
