@@ -7,7 +7,7 @@
 
         
     <div class="contenedor_botones">
-        <a href="/user/crear_ofertas" class="boton_verde ">Crear oferta</a>
+        <a href="/user/crearOfertas" class="boton_verde ">Crear oferta</a>
     </div>
 
     <div class="contenedor_tabla">

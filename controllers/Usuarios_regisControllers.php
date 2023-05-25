@@ -55,7 +55,76 @@ class Usuarios_regisControllers{
 
     }
     
-    // Crear ofertas para usuarios registrados
+    // Actualizar informacion
+    public static function actualizar_user(Router $router){
+        $id = validar0Redireccionar('/usuarios/listado');  
+        $usuarios = Usuarios::find($id);
+        $alertas = [];
+
+        $router->render_dash('/usuarios/actualizar_user', [
+            'usuarios' => $usuarios,
+            'alertas' => $alertas
+        ]);
+    }
+    public static function actualizar_user_P(Router $router){
+        $carpeta = CARPETA_IMAGEN_USUARIOS;
+        $alertas = [];
+
+        if($_SERVER['REQUEST_METHOD'] === 'POST'){
+            $usuarios = Usuarios::find($_POST['usuarios']['id']);
+            
+            $args = $_POST['usuarios'];
+            $usuarios->sincronizar($args);
+            
+            $alertas = $usuarios->validar();                                // Validacion
+
+            $nombreImagen = md5( uniqid( rand(), true)) . ".jpg";           // Generar nombre unico para cada imagen
+            
+            if($_FILES['usuarios']['tmp_name']['imagen']){                  // Setear la imagen a la clase
+                $imagen = Image::make($_FILES['usuarios']['tmp_name']['imagen'])->resize(350, 250);
+                $usuarios->setImagen($nombreImagen, $carpeta);                                   
+                }
+            
+            if(empty($alertas)){                                             // Inserta el registro en la base de datos si no hay errores
+                if($_FILES['usuarios']['tmp_name']['imagen']){
+                    $imagen->save($carpeta . $nombreImagen);
+                }
+                    $usuarios->guardar();
+                    header("Location: /user/listado");
+                }
+        }
+
+        $router->render_dash('/dashboard', [
+            'alertas' => $alertas
+        ]);
+    }
+
+
+    // Ofertas de usuarios registrados
+    
+    // Listar
+    public static function listar_ofertas_user(Router $router){
+        $ofertas = Ofertas_user::all();
+
+        $router->render_dash('/usuarios/ofertas/ofertas', [
+            'ofertas' => $ofertas
+        ]);
+    }
+    public static function listar_ofertas_user_P(Router $router){
+        $ofertas = Ofertas_user::all();
+
+        foreach($ofertas as $data){
+            $json['data'][] = $data;
+        }
+
+        $jsonstring = json_encode($json);
+        echo $jsonstring;
+
+        $router->render_dash('/dashboard', []);   
+
+    }
+
+    // Crear
     public static function userCrearOfertas(Router $router){
         $alertas = [];
         $ofertas = new Ofertas_user();
@@ -78,37 +147,53 @@ class Usuarios_regisControllers{
                 
                 $ofertas->guardar();
             
-                header('Location: /user/ofertas');
+                header('Location: /usearios/ofertas/ofertas');
             }
         }
 
-        $router->render_dash('/user/crearOfertas', [
+        $router->render_dash('/usurios/ofertas/crear', [
             'alertas' => $alertas,
 
         ]);
     }
 
-    // Administracion del listado de ofertas de usuarios registrados
-    public static function listar_ofertas_user(Router $router){
-        $ofertas = Ofertas_user::all();
-   
-           $router->render_dash('/usuarios/ofertas', [
-               'ofertas' => $ofertas
-           ]);
-    }
-    public static function listar_ofertas_user_P(Router $router){
-        $ofertas = Ofertas_user::all();
+    // Actualizar
+    public static function userActualizarOferta(Router $router){
+        $id = validar0Redireccionar('/user/ofertas');  
+        $ofertas = Ofertas_user::find($id);
 
-        foreach($ofertas as $data){
-            $json['data'][] = $data;
+        $alertas = [];
+        $carpeta = CARPETA_IMAGEN_OFERTAS;
+
+        if($_SERVER['REQUEST_METHOD'] === 'POST'){
+            $args = $_POST['oferta'];
+            $ofertas->sincronizar($args);
+
+            $alertas = $ofertas->validar();
+
+            $nombreImagen = md5( uniqid( rand(), true)) . ".jpg"; // 
+
+            if($_FILES['oferta']['tmp_name']['imagen']){
+                $imagen = Image::make($_FILES['oferta']['tmp_name']['imagen'])->resize(350, 250);
+                $ofertas->setImagen($nombreImagen,  $carpeta);                                   
+            }
+
+            if(empty($alertas)){
+                if($_FILES['oferta']['tmp_name']['imagen']){
+                    $imagen->save($carpeta . $nombreImagen);
+                }
+                
+                $ofertas->guardar();
+                header('Location: /user/ofertas');
+            }
         }
 
-        $jsonstring = json_encode($json);
-        echo $jsonstring;
-
-        $router->render_dash('/dashboard', []);   
-
+        $router->render_dash('/usuarios/ofertas', [
+            'oferta' => $ofertas,
+            'alertas' => $alertas
+        ]);
     }
+ 
 
   
     // Muestra la pagina de envio de email
@@ -147,50 +232,7 @@ class Usuarios_regisControllers{
            header("Location: /usuarios_registrados?id=$id_usuario");
     }
        
-    // Actualizar informacion de los usuarios desde el administrador
-    public static function actualizar_user(Router $router){
-        $id = validar0Redireccionar('/usuarios/listado');  
-        $usuarios = Usuarios::find($id);
-        $alertas = [];
 
-        $router->render_dash('/usuarios/actualizar_user', [
-            'usuarios' => $usuarios,
-            'alertas' => $alertas
-        ]);
-    }
-    // Actualizar informacion de los usuarios desde el administrador
-    public static function actualizar_user_P(Router $router){
-        $carpeta = CARPETA_IMAGEN_USUARIOS;
-        $alertas = [];
-
-        if($_SERVER['REQUEST_METHOD'] === 'POST'){
-            $usuarios = Usuarios::find($_POST['usuarios']['id']);
-           
-            $args = $_POST['usuarios'];
-            $usuarios->sincronizar($args);
-            
-            $alertas = $usuarios->validar();                                // Validacion
-
-            $nombreImagen = md5( uniqid( rand(), true)) . ".jpg";           // Generar nombre unico para cada imagen
-            
-            if($_FILES['usuarios']['tmp_name']['imagen']){                  // Setear la imagen a la clase
-                $imagen = Image::make($_FILES['usuarios']['tmp_name']['imagen'])->resize(350, 250);
-                $usuarios->setImagen($nombreImagen, $carpeta);                                   
-                }
-            
-            if(empty($alertas)){                                             // Inserta el registro en la base de datos si no hay errores
-                if($_FILES['usuarios']['tmp_name']['imagen']){
-                    $imagen->save($carpeta . $nombreImagen);
-                }
-                    $usuarios->guardar();
-                    header("Location: /user/listado");
-                }
-        }
-
-        $router->render_dash('/dashboard', [
-            'alertas' => $alertas
-        ]);
-    }
 
 
 
