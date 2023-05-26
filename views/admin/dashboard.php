@@ -1,7 +1,7 @@
 
 <?php
-session_start();
-    $_SESSION['nombre'] . " " . $_SESSION['apellidos'] ?? '';
+    session_start();
+    $_SESSION['nombre'] ??'';
     $_SESSION['imagen'] ?? '';
 ?>
 
