@@ -12,12 +12,7 @@
     
     <div class="contenedor_formulario">
         <form class="formulario" method="POST" enctype="multipart/form-data">
-
              <?php include __DIR__ . '/formulario.php'; ?>
-
-             <div class="contenedor_botones">
-                <input type="submit" value="Enviar" class="boton_verde">
-            </div>
         </form>
     </div>
 

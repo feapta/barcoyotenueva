@@ -23,5 +23,7 @@
             <?php } ?>
         </div>
 
-        <input type="submit"  class="boton_verde" value="Guardar">
+        <div class="contenedor_botones">
+            <input type="submit"  class="boton_verde" value="Guardar">
+        </div>
 

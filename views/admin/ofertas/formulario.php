@@ -31,5 +31,5 @@
         <?php } ?>
 
         <div class="contenedor_botones">
-            <input type="submit" value="Enviar" class="boton_verde">
+            <input type="submit" class="boton_verde" value="Guardar">
         </div>

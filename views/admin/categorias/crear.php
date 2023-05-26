@@ -10,12 +10,7 @@
         <?php include_once __DIR__ . "/../../templates/alertas.php" ?>
 
         <form class="formulario" method="POST" action="/admin/categorias/crear" enctype="multipart/form-data">
-            
             <?php include __DIR__ . '/formulario.php'; ?>
-            
-            <div class="contenedor_botones">
-                <input type="submit" value="Enviar" class="boton_verde">
-            </div>
         </form>
     </div>
     

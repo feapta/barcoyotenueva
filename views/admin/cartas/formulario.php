@@ -85,6 +85,6 @@
     </div>
 
     <div class="contenedor_botones">
-        <input type="submit" value="Guardar" class="boton_verde">
+        <input type="submit" class="boton_verde" value="Guardar">
     </div>
 
