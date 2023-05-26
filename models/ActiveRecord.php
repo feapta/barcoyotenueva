@@ -181,8 +181,8 @@ class ActiveRecord {
         return $resultado;
     }
     // Devuelve los registros que tengan oferta y por la categoria
-    public static function allOrdenAlfaCartaOfertas($columna) {
-        $query = "SELECT * FROM " . static::$tabla . " WHERE oferta = 1 AND categoria = '$columna' ORDER BY titulo ASC ";
+    public static function allOrdenAlfaCartaOfertas( $oferta, $columna) {
+        $query = "SELECT * FROM " . static::$tabla . " WHERE oferta = $oferta AND categoria = '$columna' ORDER BY titulo ASC ";
         $resultado = self::consultarSQL($query);
         return $resultado;
     }

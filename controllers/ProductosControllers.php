@@ -28,7 +28,7 @@ class ProductosControllers{
             $inicio = false;
             $id = validar0Redireccionar('/admin/carta_general');  
             $catego = Categorias::where_array('id', $id);
-            $productos = Productos::whereOrderAlfa('categoria', $catego->categoria, 'titulo');
+            $productos = Productos::allOrdenAlfaCartaOfertas(0, $catego->categoria);
             
             if(!$productos){
                 Productos::setAlerta('error', 'Lo sentimos, pero no hemos encontrado ofertas');
@@ -61,7 +61,7 @@ class ProductosControllers{
             $inicio = false;
             $id = validar0Redireccionar('/cartas/carta_ofertas');  
             $catego = Categorias::where_array('id', $id);
-            $productos = Productos::allOrdenAlfaCartaOfertas($catego->categoria, 'titulo');
+            $productos = Productos::allOrdenAlfaCartaOfertas( 1, $catego->categoria);
             
             if(!$productos){
                 Productos::setAlerta('error', 'Lo sentimos, pero no hemos encontrado ofertas');
