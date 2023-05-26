@@ -1,14 +1,7 @@
 
 <?php
-    if(!isset($_SESSION)){
-        session_start();
-    }
-
-    $auth = $_SESSION['login'] ?? false;
-    $_SESSION['nombre'] ?? false;
+    $_SESSION['nombre'] . " " . $_SESSION['apellidos'] ?? '';
     $_SESSION['imagen'] ?? false;
-    $nombreSolo = $_SESSION['nombreSolo'] ?? '';
-    
 ?>
 
 <!-- Pagina principal de administracion -->
@@ -38,6 +31,12 @@
                             <img class="logo" src="/build/img/logo1.png" alt="">
                         </a>
                     </div>
+
+                    <div class="conteUsuario">
+                        <h4><?php echo $_SESSION['nombre']; ?></h4>
+                        <img src="/imagenes_usuarios/<?php echo $_SESSION['imagen']; ?>" alt="Imagen">         
+                    </div>
+
                     <div class="conte_titulo">
                         <a href="/dashboard">Panel de control</a>
                     </div>
@@ -125,15 +124,9 @@
         </div>
 
         <div class="contenido_dash">
-            <div class="barra_dash">
-                <h4><?php echo $_SESSION['nombre']; ?></h4>
-                <img src="/imagenes_usuarios/<?php echo $_SESSION['imagen']; ?>" alt="Imagen">         
-            </div>
-
             <div class="mobile_dash">
                 <img class="nav_dash" src="/build/img/barras.svg" alt="Icono navegacion resposive">
             </div>
-
 
             <div>
                 <?php echo $contenido_dash ?? '' ;?>

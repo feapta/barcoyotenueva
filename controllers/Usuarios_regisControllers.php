@@ -15,6 +15,7 @@ class Usuarios_regisControllers{
 
     public static function usuarios_registrados(Router $router){
         session_start();
+        
         $alertas = [];
         $inicio = false;
         $id = $_GET['id'];
