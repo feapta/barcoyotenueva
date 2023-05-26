@@ -175,8 +175,8 @@ class ActiveRecord {
     }
 
     // Devuelve todos los registro en orden descendente
-    public static function allOrdenAlfa($columna) {
-        $query = "SELECT * FROM " . static::$tabla . " ORDER BY $columna ASC ";
+    public static function allOrdenAlfa($categoria) {
+        $query = "SELECT * FROM " . static::$tabla . " WHERE categoria = $categoria ORDER BY titulo ASC ";
         $resultado = self::consultarSQL($query);
         return $resultado;
     }
