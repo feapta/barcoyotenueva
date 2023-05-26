@@ -37,6 +37,8 @@ class UsuariosControllers{
 
                         if($usuarios->admin === "1"){
                             $_SESSION['admin'] = 'admin';
+                            $_SESSION['nombre'] = $usuarios->nombre . " " . $usuarios->apellidos;
+                            $_SESSION['imagen'] = $usuarios->imagen;
                             header("Location: /dashboard");
                         }
                         else{

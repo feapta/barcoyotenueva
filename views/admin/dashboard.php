@@ -1,13 +1,14 @@
 
 <?php
     $_SESSION['nombre'] . " " . $_SESSION['apellidos'] ?? '';
-    $_SESSION['imagen'] ?? false;
+    $_SESSION['imagen'] ?? '';
 ?>
 
 <!-- Pagina principal de administracion -->
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,7 +34,7 @@
                     </div>
 
                     <div class="conteUsuario">
-                        <h4><?php echo $_SESSION['nombre']; ?></h4>
+                        <h4><?php echo $_SESSION['nombre'] . " " . $_SESSION['apellidos'] ?? ''; ?></h4>
                         <img src="/imagenes_usuarios/<?php echo $_SESSION['imagen']; ?>" alt="Imagen">         
                     </div>
 
@@ -124,6 +125,9 @@
         </div>
 
         <div class="contenido_dash">
+            <div class="barraDash">
+
+            </div>
             <div class="mobile_dash">
                 <img class="nav_dash" src="/build/img/barras.svg" alt="Icono navegacion resposive">
             </div>
