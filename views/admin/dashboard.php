@@ -1,5 +1,6 @@
 
 <?php
+session_start();
     $_SESSION['nombre'] . " " . $_SESSION['apellidos'] ?? '';
     $_SESSION['imagen'] ?? '';
 ?>
