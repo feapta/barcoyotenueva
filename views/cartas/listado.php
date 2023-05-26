@@ -4,8 +4,16 @@
 
 <div class="contenedor listado_cartas">
     <div class="titulo">
-            <h3><?php echo $categorias->categoria; ?> </h3>
-    </div>
+            <h3>
+                <?php 
+                    if($producto->oferta === 0){
+                        echo $categorias->categoria; 
+                    } else {
+                        echo $categorias->categoria  . " en oferta";
+                    } 
+                ?>
+            </h3>
+     </div>
     
     <div class="botones">
         <a href="/" class="boton_verde">Volver</a>
@@ -25,15 +33,7 @@
                     </div>
 
                     <div class="texto">
-                        <h4>    <?php 
-                                    
-                                    if($producto->oferta === 0){
-                                        echo $producto->titulo; 
-                                    } else {
-                                        echo $producto->titulo . "en oferta";
-                                    }
-                                ?> 
-                        </h4>
+                        <h4>    <?php echo $producto->titulo; ?></h4>
                         <p>     <?php echo $producto->descripcion; ?></p>
                         
                         <div class="contenedor_precios">
