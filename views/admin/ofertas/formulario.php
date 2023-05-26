@@ -30,6 +30,6 @@
             <img src="/imagenes_ofertas/<?php echo $ofertas->imagen ?>" class="imagen">
         <?php } ?>
 
-        <div class="contenedo_botones">
+        <div class="contenedor_botones">
             <input type="submit" value="Enviar" class="boton_verde">
         </div>

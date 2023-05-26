@@ -8,10 +8,5 @@
 
     <form class="contenedor_formulario" method="POST" action="/user/crearOfertas" enctype="multipart/form-data">
         <?php include __DIR__ . '/formulario.php'; ?>
-
-        <div class="botones">
-            <input type="submit" value="Guardar" class="boton_verde">
-            <a href="/admin/ofertas" class="boton_verde">Volver</a>
-        </div>
     </form>
 </div>
