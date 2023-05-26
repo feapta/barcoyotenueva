@@ -4,19 +4,15 @@
 
 <div class="contenedor listado_cartas">
     <div class="titulo">
-           
-                 <?php foreach($productos as $producto) { ?>
-                    <h3>
-                        <?php
-                            if($producto->oferta === 0){
-                                echo $categorias->categoria; 
-                            } else {
-                                echo $categorias->categoria  . " en oferta";
-                            }
-                        ?> 
-                    </h3>
-                <?php } ?>
-            </h3>
+        <h3>
+            <?php
+                if($oferta === 0){
+                    echo $categorias->categoria; 
+                } else {
+                    echo $categorias->categoria  . " en oferta";
+                }
+            ?> 
+        </h3>
      </div>
     
     <div class="botones">
