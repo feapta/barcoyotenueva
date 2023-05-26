@@ -27,14 +27,15 @@
                     <div class="texto">
                         <h4>    <?php echo $producto->titulo; ?> </h4>
                         <p>     <?php echo $producto->descripcion; ?></p>
+                        
                         <div class="contenedor_precios">
-                            <?php if($producto->oferta){?>
-                                <div class="precio_ofer">
+                            <?php if(!$producto->oferta){?>
+                                <div class="precio">
                                 <h5>Precio oferta</h5>
                                 <h5>     <?php echo $producto->precio_ofer; ?> €</h5>
                                 </div>
                             <?php } else {?>
-                                <div class="precio">
+                                <div class="precio_ofer">
                                 <h5>Precio</h5>
                                 <h5>     <?php echo $producto->precio; ?> €</h5>
                                 </div>
@@ -47,6 +48,7 @@
                                 <?php }?>
                             </div>
                         </div>
+
                     </div>
 
                 </li>

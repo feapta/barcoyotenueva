@@ -36,7 +36,4 @@
 </div>
 
 <?php
-$script .= '
-    <script src="/build/js/datatable/productos.js"></script>
-    ';
-?>
+$script .= '   <script src="/build/js/datatable/productos.js"></script>   '; ?>
