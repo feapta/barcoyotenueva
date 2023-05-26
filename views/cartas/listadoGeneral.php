@@ -29,10 +29,18 @@
                         <p>     <?php echo $producto->descripcion; ?></p>
                         
                         <div class="contenedor_precios">
+                            <?php if($producto->precio != 0) {?>
                                 <div class="precio">
                                 <h5>Precio</h5>
                                 <h5>     <?php echo $producto->precio; ?> €</h5>
                                 </div>
+                            <?php } else {?>
+                                 <div class="precio">
+                                <h5>Precio oferta</h5>
+                                <h5>     <?php echo $producto->precio_ofer; ?> €</h5>
+                                </div>
+                            <?php }?>
+                           
                                 
                             <div class="precio_med">
                                 <?php if($producto->media) {?>
