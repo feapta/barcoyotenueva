@@ -144,6 +144,7 @@
     <script src="/build/js/sweetalert2.js"></script>
     <script src="/build/js/dashboard.js"></script>
     <script src="/build/js/modernizr.js"></script>
+    <script src="/build/js/relog.js"></script>
         
     <script src="/build/js/datatable/jquery-3-6-4.js"></script>
     <script src="/build/js/datatable/datatables.js"></script>
