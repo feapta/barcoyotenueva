@@ -84,8 +84,7 @@
         <?php } ?>
     </div>
 
-    <div class="botones">
+    <div class="contenedor_botones">
         <input type="submit" value="Guardar" class="boton_verde">
-        <a href="/admin/carta_general" class="boton_verde">Volver</a>
     </div>
 
