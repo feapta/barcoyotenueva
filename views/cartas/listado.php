@@ -39,12 +39,12 @@
                         <div class="contenedor_precios">
                             <?php if($producto->precio_ofer){?>
                                 <div class="precio_ofer">
-                                <h5>Precio</h5>
+                                <h5>Precio oferta</h5>
                                 <h5>     <?php echo $producto->precio_ofer; ?> €</h5>
                                 </div>
                             <?php } else {?>
                                 <div class="precio">
-                                <h5>Precio</h5>
+                                <h5>Precio general</h5>
                                 <h5>     <?php echo $producto->precio; ?> €</h5>
                                 </div>
                             <?php }?>
