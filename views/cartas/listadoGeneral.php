@@ -30,7 +30,7 @@
                         
                         <div class="contenedor_precios">
                                 <div class="precio">
-                                <h5>Precio general</h5>
+                                <h5>Precio</h5>
                                 <h5>     <?php echo $producto->precio; ?> €</h5>
                                 </div>
                                 
