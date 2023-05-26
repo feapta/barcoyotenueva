@@ -25,7 +25,15 @@
                     </div>
 
                     <div class="texto">
-                        <h4>    <?php echo $producto->titulo; ?> </h4>
+                        <h4>    <?php 
+                                    
+                                    if($producto->oferta){
+                                        echo $producto->titulo; 
+                                    } else {
+                                        echo $producto->titulo . "en oferta";
+                                    }
+                                ?> 
+                        </h4>
                         <p>     <?php echo $producto->descripcion; ?></p>
                         
                         <div class="contenedor_precios">
