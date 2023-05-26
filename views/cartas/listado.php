@@ -6,7 +6,7 @@
     <div class="titulo">
         <h3>
             <?php
-                if($oferta === '0'){
+                if($oferta === 0){
                     echo $categorias->categoria; 
                 } else {
                     echo $categorias->categoria  . " en oferta";
@@ -37,7 +37,7 @@
                         <p>     <?php echo $producto->descripcion; ?></p>
                         
                         <div class="contenedor_precios">
-                            <?php if($producto->oferta === '0'){?>
+                            <?php if($producto->oferta === "0"){?>
                                 <div class="precio">
                                 <h5>Precio oferta</h5>
                                 <h5>     <?php echo $producto->precio_ofer; ?> €</h5>
