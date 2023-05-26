@@ -180,12 +180,13 @@ class ActiveRecord {
         $resultado = self::consultarSQL($query);
         return $resultado;
     }
-    // Devuelve todos los registro en orden descendente
+    // Devuelve los registros que tengan oferta y por la categoria
     public static function allOrdenAlfaCartaOfertas($columna) {
-        $query = "SELECT * FROM " . static::$tabla . " WHERE oferta = 1 ORDER BY $columna ASC ";
+        $query = "SELECT * FROM " . static::$tabla . " WHERE oferta = 1 AND categoria = '$columna' ORDER BY titulo ASC ";
         $resultado = self::consultarSQL($query);
         return $resultado;
     }
+
     // Devuelve todos los registro en orden descendente
     public static function allOrdenAlfaCartaOfertasporFecha($columna, $fecha) {
         $query = "SELECT * FROM " . static::$tabla . " WHERE valida > '$fecha' ORDER BY $columna ASC ";

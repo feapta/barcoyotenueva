@@ -13,7 +13,7 @@
             
             <?php include __DIR__ . '/formulario.php'; ?>
             
-            <div class="contenedo_botones">
+            <div class="contenedor_botones">
                 <input type="submit" value="Enviar" class="boton_verde">
             </div>
         </form>

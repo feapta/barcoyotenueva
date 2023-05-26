@@ -23,7 +23,7 @@ class ProductosControllers{
             ]);
         }
 
-        // listar carta general por categoria
+        // listar productos por categoria de la carta general
         public static function listar_post(Router $router){
             $inicio = false;
             $id = validar0Redireccionar('/admin/carta_general');  
@@ -46,7 +46,7 @@ class ProductosControllers{
         }
 
 
-        // Listar carta ofertas por categoria
+        // Listar categorias de carta ofertas
         public static function carta_ofertas(Router $router){
             $inicio = false;
             $categorias = Categorias::allOrdenAlfa('categoria');
@@ -56,12 +56,12 @@ class ProductosControllers{
                 'categoria' => $categorias
             ]);
         }
-        // listar carta ofertas por categoria
+        // listar productos por categoria de la carta ofertas
         public static function carta_ofertas_post(Router $router){
             $inicio = false;
-            $id = validar0Redireccionar('/admin/carta_ofertas');  
+            $id = validar0Redireccionar('/cartas/carta_ofertas');  
             $catego = Categorias::where_array('id', $id);
-            $productos = Productos::allOrdenAlfaCartaOfertas('categoria', $catego->categoria, 'titulo');
+            $productos = Productos::allOrdenAlfaCartaOfertas($catego->categoria, 'titulo');
             
             if(!$productos){
                 Productos::setAlerta('error', 'Lo sentimos, pero no hemos encontrado ofertas');

@@ -23,7 +23,7 @@ class Productos extends ActiveRecord {
 
     public function __construct($args = []){
         $this->id = $args['id'] ?? null;
-        $this->categoria = $args['categorias'] ?? '';
+        $this->categoria = $args['categoria'] ?? '';
         $this->oferta = $args['oferta'] ?? '';
         $this->titulo = $args['titulo'] ?? '';
         $this->descripcion = $args['descripcion'] ?? '';
