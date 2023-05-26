@@ -4,14 +4,7 @@
 
 <div class="contenedor listado_cartas">
     <div class="titulo">
-        <h3>
-            <?php
-                if($oferta === 0){
-                    echo $categorias->categoria; 
-                } else {
-                    echo $categorias->categoria  . " en oferta";
-                }
-            ?> 
+        <h3> <?php echo $categorias->categoria . " en oferta"; ?> 
         </h3>
      </div>
     
@@ -37,17 +30,10 @@
                         <p>     <?php echo $producto->descripcion; ?></p>
                         
                         <div class="contenedor_precios">
-                            <?php if($producto->precio_ofer){?>
                                 <div class="precio_ofer">
                                 <h5>Precio oferta</h5>
                                 <h5>     <?php echo $producto->precio_ofer; ?> €</h5>
                                 </div>
-                            <?php } else {?>
-                                <div class="precio">
-                                <h5>Precio general</h5>
-                                <h5>     <?php echo $producto->precio; ?> €</h5>
-                                </div>
-                            <?php }?>
                                 
                             <div class="precio_med">
                                 <?php if($producto->media) {?>
