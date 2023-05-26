@@ -28,7 +28,7 @@ class ProductosControllers{
             $inicio = false;
             $id = validar0Redireccionar('/admin/carta_general');  
             $catego = Categorias::where_array('id', $id);
-            $productos = Productos::allOrdenAlfaCartaOfertas(0, $catego->categoria);
+            $productos = Productos::allOrdenAlfa($catego->categoria);
             $oferta = 0;
 
             if(!$productos){
