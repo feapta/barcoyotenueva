@@ -7,14 +7,16 @@
     <div class="contenido">
         <div class="informe">
             <h4>Carta general</h4>
-            <?php foreach($carta_general as $carta_gen) { ?>
-                <p><?php echo $carta_gen; ?></p>
+            <?php foreach($productos as $producto) { ?>
+                <p><?php echo $producto; ?></p>
             <?php } ?>
         </div>
 
         <div class="informe">
             <h4>Menus</h4>
-                <p><?php echo $menus; ?></p>
+            <?php foreach($menus as $menu) { ?>
+                <p><?php echo $menu; ?></p>
+            <?php } ?>
         </div>
 
         <div class="informe">
