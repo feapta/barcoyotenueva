@@ -51,7 +51,7 @@ class MenusControllers{
             $menus = new Menus();
             
             if($_SERVER['REQUEST_METHOD'] === 'POST'){
-                $menus = new Menus($_POST['producto']);
+                $menus = new Menus($_POST['menu']);
 
                 // Seccion para subir imagenes
                 $nombreImagen = md5( uniqid( rand(), true)) . ".jpg";
