@@ -13,6 +13,7 @@ use Controllers\UsuariosControllers;
 use Controllers\CategoriasControllers;
 use Controllers\OfertasControllers;
 use Controllers\Usuarios_regisControllers;
+use Controllers\MenusControllers;
 
 $router = new Router();
 
