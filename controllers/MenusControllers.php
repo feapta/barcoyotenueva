@@ -15,7 +15,7 @@ class MenusControllers{
             $inicio = false;
             $menus = Menus::all();
 
-            $router->render('/menus', [
+            $router->render('menus', [
                 'inicio' => $inicio,
                 'menus' => $menus
             ]);
