@@ -11,12 +11,12 @@
 
     <div class="tabla_oferta">
         <ul class="tabla_a">
-            <?php foreach($menus as $oferta) { ?>
+            <?php foreach($menus as $menu) { ?>
                 <li class="seleccion">
-                    <img src="/imagenes_menus/<?php echo $menus->imagen; ?>" alt="Imagenes">
-                    <h4>    <?php echo $menus->titulo; ?> </h4>
-                    <p>     <?php echo $menus->descripcion; ?></p>
-                    <h5>    <?php echo $menus->precio; ?> €</h5>
+                    <img src="/imagenes_menus/<?php echo $menu->imagen; ?>" alt="Imagenes">
+                    <h4>    <?php echo $menu->titulo; ?> </h4>
+                    <p>     <?php echo $menu->descripcion; ?></p>
+                    <h5>    <?php echo $menu->precio; ?> €</h5>
                 </li>
             <?php } ?>
         </ul>
