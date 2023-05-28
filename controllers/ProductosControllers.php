@@ -44,38 +44,6 @@ class ProductosControllers{
             ]);
         }
 
-
-        // Listar categorias de carta ofertas
-        public static function carta_ofertas(Router $router){
-            $inicio = false;
-            $categorias = Categorias::allOrdenAlfa('categoria');
-
-            $router->render('cartas/carta_ofertas', [
-                'inicio' => $inicio,
-                'categoria' => $categorias
-            ]);
-        }
-        // listar productos por categoria de la carta ofertas
-        public static function carta_ofertas_post(Router $router){
-            $inicio = false;
-            $id = validar0Redireccionar('/cartas/carta_ofertas');  
-            $catego = Categorias::where_array('id', $id);
-            $productos = Productos::allOrdenAlfaCartaOfertas( 1, $catego->categoria);
-            
-            if(!$productos){
-                Productos::setAlerta('error', 'Lo sentimos, pero no hemos encontrado ofertas');
-            }
-
-            $alertas = Productos::getAlertas();
-
-            $router->render('/cartas/listadoOfertas', [
-                'inicio' => $inicio,
-                'productos' => $productos,
-                'categorias' => $catego,
-                'alertas' => $alertas
-            ]);
-        }
-
         // Listar ofertas de temporada
         public static function listar_ofertas(Router $router){
             $inicio = false;
@@ -122,25 +90,6 @@ class ProductosControllers{
 
             $router->render_dash('/dashboard', []);    
         }
-
-        // Listar carta ofertas
-        public static function listar_dash_carta_O(Router $router){
-
-            $router->render_dash('cartas/carta_ofertas', [ ]);
-        }
-        public static function listar_dash_carta_O_P(Router $router){
-            $productos = Productos::where('oferta', '1');
-
-            foreach($productos as $data){
-                $json['data'][] = $data;
-                }
-        
-                $jsonstring = json_encode($json);
-                echo $jsonstring;
-        
-            $router->render_dash('/dashboard', [ ]);
-        }
-
 
         // Crear producto
         public static function crear_producto(Router $router){
