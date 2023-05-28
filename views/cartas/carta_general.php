@@ -3,8 +3,8 @@
 <!-- Categorias de la carta -->
 
 <div class="contenedor contenido_centrado cartas">
-    <h3>Carta general</h3>
-    <p>Aqui les presentamos los productos que siempre nos acompañan.</p>
+    <h3>Carta</h3>
+    <p>¿Que desea tomar hoy?</p>
     
     <div class="contenedor_botones">
         <a href="/" class="boton_verde volver" type="submit">Volver</a>

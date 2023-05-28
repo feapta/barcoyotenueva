@@ -15,7 +15,7 @@ class MenusControllers{
             $inicio = false;
             $menus = Menus::all();
 
-            $router->render('cartas/carta_general', [
+            $router->render('/menus/menus', [
                 'inicio' => $inicio,
                 'menus' => $menus
             ]);
@@ -27,7 +27,7 @@ class MenusControllers{
     // Listar carta general
         public static function menusListarDash(Router $router){
 
-            $router->render_dash('/menus/menus', [
+            $router->render_dash('/admin/menus/menus', [
 
             ]);   
         }
@@ -67,7 +67,7 @@ class MenusControllers{
                     $imagen->save($carpeta . $nombreImagen);                         // Guarda la imagen en el disco duro con la libreria intervention
                     $menus->guardar();
             
-                    header('Location: /menus/listarDash');
+                    header('Location: /admin/menus/listarDash');
                 }
             }
 
@@ -80,7 +80,7 @@ class MenusControllers{
 
         // Actualizar menu
         public static function menusActualizarDash(Router $router){
-            $id = validar0Redireccionar('/menus/listarDash');  
+            $id = validar0Redireccionar('/admin/menus/listarDash');  
             $menus = Menus::find($id);
 
             $alertas = [];
@@ -106,7 +106,7 @@ class MenusControllers{
                 if(empty($alertas)){
                     
                     $menus->guardar();
-                    header('Location: /menus/listarDash');
+                    header('Location: /admin/menus/listarDash');
                 }
             }
 
