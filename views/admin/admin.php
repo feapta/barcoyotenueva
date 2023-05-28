@@ -13,8 +13,8 @@
         </div>
 
         <div class="informe">
-            <h4>Carta ofertas</h4>
-                <p><?php echo $cuentas; ?></p>
+            <h4>Menus</h4>
+                <p><?php echo $menus; ?></p>
         </div>
 
         <div class="informe">

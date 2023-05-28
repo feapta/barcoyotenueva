@@ -1,11 +1,11 @@
 
-<!-- Pagina index carta ofertas -->
+<!-- Pagina menus -->
 
 <div class="contenedor contenedor_tablas">
     <h3>Carta ofertas</h3>
 
     <div class="contenedor_tabla">
-        <table id="productos_carta_oferta" class="display" style="width:100%">
+        <table id="menus" class="display" style="width:100%">
             <thead class="head_tabla">
                 <tr>
                     <th>Id</th>
@@ -33,6 +33,6 @@
 
 <?php
     $script .= '
-        <script src="/build/js/datatable/carta_ofertas.js"></script>
+        <script src="/build/js/datatable/menus.js"></script>
     ';
 ?>

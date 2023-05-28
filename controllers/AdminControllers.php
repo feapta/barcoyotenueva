@@ -11,6 +11,7 @@ use Model\Productos;
 use Model\Categorias;
 use Model\Usuarios;
 use Model\Ofertas;
+use Model\Menus;
 use Model\Ofertas_user;
 
 class AdminControllers{
@@ -23,7 +24,7 @@ class AdminControllers{
         $cuentaUsu = new Usuarios;
         $cuentaCom = new Comentarios();
         $cuentaCag = new Productos();
-        $cuentaOfe = new Ofertas();
+        $cuentaMen = new Menus();
         $productos = Productos::where('oferta', '1'); 
         $cuenta = count($productos);
 
@@ -31,14 +32,14 @@ class AdminControllers{
         $regisUsu = $cuentaUsu->contar('usuarios');
         $regisCom = $cuentaCom->contar('comentarios');
         $regisCag = $cuentaCag->contar('productos');
-        $regisOfe = $cuentaOfe->contar('ofertas');
+        $menus = $cuentaMen->contar('menus');
  
          $router->render_dash('/admin',[
             "categorias" => $regisCat,
             "usuarios" => $regisUsu,
             "comentarios" => $regisCom,
             "carta_general" => $regisCag,
-            "ofertas" => $regisOfe,
+            "menus" => $menus,
             "cuentas" => $cuenta
          ]);
 
@@ -153,21 +154,21 @@ class AdminControllers{
                     echo json_encode($resultado);
 
                 } 
-                elseif ($tipo === 'oferta'){
-                    $carpeta = CARPETA_IMAGEN_OFERTAS;
-                    $producto = Ofertas::find($_POST['id']);
+                elseif ($tipo === 'menus'){
+                    $carpeta = CARPETA_IMAGEN_MENUS;
+                    $menus = Menus::find($_POST['id']);
 
-                    if($producto->imagen){
-                        $imagen = $producto->imagen;
-                        $producto->setImagen($imagen, $carpeta);
+                    if($menus->imagen){
+                        $imagen = $menus->imagen;
+                        $menus->setImagen($imagen, $carpeta);
                     }
 
-                    $resultado = $producto->eliminar();                
+                    $resultado = $menus->eliminar();                
 
                     if($resultado){
                         $resultado =   [
                             'resultado' => $resultado,
-                            'tipo' => 'oferta'
+                            'tipo' => 'menus'
                         ];
                     }
 

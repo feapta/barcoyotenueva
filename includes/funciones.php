@@ -9,6 +9,7 @@ define('CARPETA_IMAGEN_OFERTAS', $_SERVER['DOCUMENT_ROOT']. '/public/imagenes_of
 define('CARPETA_IMAGEN_CARTAS', $_SERVER['DOCUMENT_ROOT']. '/public/imagenes_cartas/');
 define('CARPETA_IMAGEN_COMENTARIOS', $_SERVER['DOCUMENT_ROOT']. '/public/imagenes_comentarios/');
 define('CARPETA_IMAGEN_ARTICULOS', $_SERVER['DOCUMENT_ROOT']. '/public/imagenes_articulos/');
+define('CARPETA_IMAGEN_MENUS', $_SERVER['DOCUMENT_ROOT']. '/public/imagenes_menus/');
 
 
 function incluirTemplate(string $nombre, bool $inicio = false ){

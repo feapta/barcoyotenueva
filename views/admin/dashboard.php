@@ -64,49 +64,58 @@
                             <span data-paso_menu="2"> Cartas</span>
                         </div>
                         <nav class="navega-2">
-                            <a href="/admin/carta_general"><img src="/build/img/flecha-dr16-B.png" alt="">   General</a>
-                            <a href="/admin/carta_O_P"><img src="/build/img/flecha-dr16-B.png" alt="">   Ofertas</a>
+                            <a href="/admin/carta_general"><img src="/build/img/flecha-dr16-B.png" alt="">   Carta</a>
                             <a href="/admin/crear"><img src="/build/img/flecha-dr16-B.png" alt="">   Crear</a>
                         </nav>
 
-                        <!-- paso 3  OFERTAS-->
+                        <!-- paso 3  MENUS-->
                         <div data-paso_menu="3" class="menu_dash">
                             <img  data-paso_menu="3" class="img_navega" src="/build/img/barras.svg" alt="Icono">
-                            <span data-paso_menu="3"> Ofertas</span>
+                            <span data-paso_menu="3"> Menus</span>
                         </div>
                         <nav class="navega-3">
+                            <a href="/menus/listarDash"><img src="/build/img/flecha-dr16-B.png" alt="">   Menus/a>
+                            <a href="/menus/crearDash"><img src="/build/img/flecha-dr16-B.png" alt="">   Crear</a>
+                        </nav>
+
+                        <!-- paso 4  OFERTAS-->
+                        <div data-paso_menu="4" class="menu_dash">
+                            <img  data-paso_menu="4" class="img_navega" src="/build/img/barras.svg" alt="Icono">
+                            <span data-paso_menu="4"> Ofertas</span>
+                        </div>
+                        <nav class="navega-4">
                             <a href="/admin/ofertas"><img src="/build/img/flecha-dr16-B.png" alt="">   Ofertas</a>
                             <a href="/admin/crear_oferta"><img src="/build/img/flecha-dr16-B.png" alt="">   Crear</a>
                         </nav>
                         
-                        <!-- paso 4 BLOG -->
-                        <div data-paso_menu="4" class="menu_dash">
-                            <img data-paso_menu="4" class="img_navega" src="/build/img/barras.svg" alt="Icono">
-                            <span data-paso_menu="4"> Blog</span>
+                        <!-- paso 5 BLOG -->
+                        <div data-paso_menu="5" class="menu_dash">
+                            <img data-paso_menu="5" class="img_navega" src="/build/img/barras.svg" alt="Icono">
+                            <span data-paso_menu="5"> Blog</span>
                         </div>
-                        <nav class="navega-4">
+                        <nav class="navega-5">
                             <a href="/admin/blog"><img src="/build/img/flecha-dr16-B.png" alt="">   Comentarios</a>
                             <a href="/admin/articulos/listar"><img src="/build/img/flecha-dr16-B.png" alt="">   Articulos</a>
                             <a href="/admin/articulos/crear"><img src="/build/img/flecha-dr16-B.png" alt="">   Crea arti.</a>
                         </nav>
                             
                         <!-- paso 5 USUARIOS -->
-                        <div data-paso_menu="5" class="menu_dash">
-                            <img data-paso_menu="5" class="img_navega" src="/build/img/barras.svg" alt="Icono">
-                            <span data-paso_menu="5"> Usuarios</span>
+                        <div data-paso_menu="6" class="menu_dash">
+                            <img data-paso_menu="6" class="img_navega" src="/build/img/barras.svg" alt="Icono">
+                            <span data-paso_menu="6"> Usuarios</span>
                         </div>
-                        <nav class="navega-5">
+                        <nav class="navega-6">
                             <a href="/user/listado"><img src="/build/img/flecha-dr16-B.png" alt="">   Usuarios</a>
                             <a href="/user/ofertas"><img src="/build/img/flecha-dr16-B.png" alt="">   Ofertas</a>
                             <a href="/user/email"><img src="/build/img/flecha-dr16-B.png" alt="">   Email</a>
                         </nav>
 
                         <!-- paso 5 -->
-                        <div  data-paso_menu="6" class="menu_dash">
-                            <img data-paso_menu="6" class="img_navega" src="/build/img/barras.svg" alt="Icono">
-                            <span data-paso_menu="6"> Navegación</span>
+                        <div  data-paso_menu="7" class="menu_dash">
+                            <img data-paso_menu="7" class="img_navega" src="/build/img/barras.svg" alt="Icono">
+                            <span data-paso_menu="7"> Navegación</span>
                         </div>
-                        <nav class="navega-6">
+                        <nav class="navega-7">
                             <a href="/dashboard"><img src="/build/img/flecha-dr16-B.png" alt="">   Admin</a>
                             <a href="/contacto"><img src="/build/img/flecha-dr16-B.png" alt="">   Contacto</a>
                             <a href="/nosotros"><img src="/build/img/flecha-dr16-B.png" alt="">   Nosotros</a>

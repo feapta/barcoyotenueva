@@ -21,27 +21,27 @@
         
         <div class="cartas">
             <div class="conteTitulo">
-                <h3>Carta de ofertas</h3>
+                <h3>Menus</h3>
             </div>
 
             <div class="conteImg">
-                <a href="/carta_ofertas" >
-                    <img loading="lazy" src="/build/img/Carta_ofertas.webp" alt="Carta ofertas">
+                <a href="/menus" >
+                    <img loading="lazy" src="/build/img/menus.webp" alt="Menus">
                 </a>
             </div>
 
             <div class="conteBoton">
-                <a href="/carta_ofertas" class="boton_amarillo-block">Ver</a>
+                <a href="/menus" class="boton_amarillo-block">Ver</a>
             </div>
         </div>
         
         <div class="cartas">
             <div class="conteTitulo">
-                <h3>Carta general</h3>
+                <h3>Carta</h3>
             </div>
             <div class="conteImg">
                 <a href="/carta_general">
-                    <img loading="lazy" src="/build/img/carta.webp" alt="Carta principal">
+                    <img loading="lazy" src="/build/img/carta.webp" alt="Carta">
                 </a>
             </div>
             <div class="conteBoton">

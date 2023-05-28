@@ -47,18 +47,22 @@ $router->post('/usuarios/recuperar', [UsuariosControllers::class, 'recuperar']);
 // Cartas
 $router->get('/ofertas', [ProductosControllers::class, 'listar_ofertas']);   
 
-$router->get('/carta_ofertas', [ProductosControllers::class, 'carta_ofertas']);
-
-$router->get('/cartaOfertasPost', [ProductosControllers::class, 'carta_ofertas_post']);   
-$router->post('/cartaOfertasPost', [ProductosControllers::class, 'carta_ofertas_post']);   
-
 $router->get('/carta_general', [ProductosControllers::class, 'listar']); 
-   
+
 $router->get('/cartas/listado', [ProductosControllers::class, 'listar_post']);
 $router->post('/cartas/listado', [ProductosControllers::class, 'listar_post']);
 
+// Menus
+$router->get('/menus', [MenusControllers::class, 'menuslistar']); 
 
+$router->get('/menus/listarDash', [MenusControllers::class, 'menusListarDash']);
+$router->post('/menus/listarDash', [MenusControllers::class, 'menusListarDash_P']);
 
+$router->get('/menus/crearDash', [MenusControllers::class, 'menusCrearDash']);
+$router->post('/menus/crearDash', [MenusControllers::class, 'menusCrearDash']);
+
+$router->get('/menus/actualizarDash', [MenusControllers::class, 'menusActualizarDash']);
+$router->post('/menus/actualizarDash', [MenusControllers::class, 'menusActualizarDash']);
 
 // Administracion   ////////////////////////////////////////////////////////////////
 
