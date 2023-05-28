@@ -27,7 +27,7 @@ class MenusControllers{
     // Listar carta general
         public static function menusListarDash(Router $router){
 
-            $router->render_dash('admin/menus/menus', [
+            $router->render_dash('/menus/menus', [
 
             ]);   
         }
@@ -71,7 +71,7 @@ class MenusControllers{
                 }
             }
 
-            $router->render_dash('admin/menus/crear', [
+            $router->render_dash('/menus/crear', [
                 'alertas' => $alertas,
                 'productos' => $menus,
 
@@ -110,7 +110,7 @@ class MenusControllers{
                 }
             }
 
-            $router->render_dash('admin/menus/actualizar', [
+            $router->render_dash('/menus/actualizar', [
                 'productos' => $menus,
                 'alertas' => $alertas
             ]);
