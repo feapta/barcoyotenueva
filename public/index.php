@@ -11,9 +11,10 @@ use Controllers\ProductosControllers;
 use Controllers\PaginasControllers;
 use Controllers\UsuariosControllers;
 use Controllers\CategoriasControllers;
+use Controllers\MenusControllers;
 use Controllers\OfertasControllers;
 use Controllers\Usuarios_regisControllers;
-use Controllers\MenusControllers;
+
 
 $router = new Router();
 
@@ -54,7 +55,7 @@ $router->get('/cartas/listado', [ProductosControllers::class, 'listar_post']);
 $router->post('/cartas/listado', [ProductosControllers::class, 'listar_post']);
 
 // Menus
-$router->get('/menus', [MenusControllers::class, 'menuslistar']); 
+$router->get('/menus', [MenusControllers::class, 'menuslistar']);
 
 $router->get('/menus/listarDash', [MenusControllers::class, 'menusListarDash']);
 $router->post('/menus/listarDash', [MenusControllers::class, 'menusListarDash_P']);

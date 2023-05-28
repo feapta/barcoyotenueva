@@ -74,7 +74,7 @@
                             <span data-paso_menu="3"> Menus</span>
                         </div>
                         <nav class="navega-3">
-                            <a href="/menus/listarDash"><img src="/build/img/flecha-dr16-B.png" alt="">   Menus/a>
+                            <a href="/menus/listarDash"><img src="/build/img/flecha-dr16-B.png" alt="">   Menus</a>
                             <a href="/menus/crearDash"><img src="/build/img/flecha-dr16-B.png" alt="">   Crear</a>
                         </nav>
 
