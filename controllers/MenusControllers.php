@@ -73,7 +73,7 @@ class MenusControllers{
 
             $router->render_dash('/menus/crear', [
                 'alertas' => $alertas,
-                'productos' => $menus,
+                'menus' => $menus,
 
             ]);
         }
@@ -111,7 +111,7 @@ class MenusControllers{
             }
 
             $router->render_dash('/menus/actualizar', [
-                'productos' => $menus,
+                'menus' => $menus,
                 'alertas' => $alertas
             ]);
         }
