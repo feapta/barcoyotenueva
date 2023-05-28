@@ -35,7 +35,7 @@
                     </div>
 
                     <div class="conteUsuario">
-                        <h4><?php echo $_SESSION['nombre'] . " " . $_SESSION['apellidos'] ?? ''; ?></h4>
+                        <h4><?php echo $_SESSION['nombre'] ?? ''; ?></h4>
                         <img src="/imagenes_usuarios/<?php echo $_SESSION['imagen']; ?>" alt="Imagen">         
                     </div>
 
@@ -99,7 +99,7 @@
                             <a href="/admin/articulos/crear"><img src="/build/img/flecha-dr16-B.png" alt="">   Crea arti.</a>
                         </nav>
                             
-                        <!-- paso 5 USUARIOS -->
+                        <!-- paso 6 USUARIOS -->
                         <div data-paso_menu="6" class="menu_dash">
                             <img data-paso_menu="6" class="img_navega" src="/build/img/barras.svg" alt="Icono">
                             <span data-paso_menu="6"> Usuarios</span>
@@ -110,7 +110,7 @@
                             <a href="/user/email"><img src="/build/img/flecha-dr16-B.png" alt="">   Email</a>
                         </nav>
 
-                        <!-- paso 5 -->
+                        <!-- paso Navegacion web 7 -->
                         <div  data-paso_menu="7" class="menu_dash">
                             <img data-paso_menu="7" class="img_navega" src="/build/img/barras.svg" alt="Icono">
                             <span data-paso_menu="7"> Navegación</span>
