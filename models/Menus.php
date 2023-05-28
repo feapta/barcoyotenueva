@@ -5,8 +5,8 @@
 namespace Model;
 
 class Menus extends ActiveRecord {
-    protected static $tabla = 'productos';
-    protected static $columnasDB = ['id', 'imagen','nombre', 'descripcion', 'precio', 'creada'];
+    protected static $tabla = 'menus';
+    protected static $columnasDB = ['id', 'imagen', 'nombre', 'descripcion', 'precio', 'creada'];
 
     public $id;
     public $imagen;
