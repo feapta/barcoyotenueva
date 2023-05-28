@@ -1,7 +1,7 @@
 
     <div class="campo">
         <label for="nombre">Título</label>
-        <input type="text" id="nombre" name="menu[nombre]" placeholder="Nombre" value=<?php echo s($menuss->nombre); ?>>
+        <input type="text" id="nombre" name="menu[nombre]" placeholder="Nombre" value=<?php echo s($menus->nombre); ?>>
     </div>
 
     <div class="campo">
