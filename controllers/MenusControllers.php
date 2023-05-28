@@ -27,7 +27,7 @@ class MenusControllers{
     // Listar carta general
         public static function menusListarDash(Router $router){
 
-            $router->render_dash('menus/listarDash', [
+            $router->render_dash('admin/menus/menus', [
 
             ]);   
         }
@@ -67,11 +67,11 @@ class MenusControllers{
                     $imagen->save($carpeta . $nombreImagen);                         // Guarda la imagen en el disco duro con la libreria intervention
                     $menus->guardar();
             
-                    header('Location: /admin/menus/listarDash');
+                    header('Location: /menus/listarDash');
                 }
             }
 
-            $router->render_dash('menus/listarDash', [
+            $router->render_dash('admin/menus/crear', [
                 'alertas' => $alertas,
                 'productos' => $menus,
 
@@ -106,11 +106,11 @@ class MenusControllers{
                 if(empty($alertas)){
                     
                     $menus->guardar();
-                    header('Location: /admin/menus/listarDash');
+                    header('Location: /menus/listarDash');
                 }
             }
 
-            $router->render_dash('menus/listarDash', [
+            $router->render_dash('admin/menus/actualizar', [
                 'productos' => $menus,
                 'alertas' => $alertas
             ]);
