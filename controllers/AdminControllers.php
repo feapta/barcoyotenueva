@@ -20,27 +20,27 @@ class AdminControllers{
         session_start();
         isAdmin();                  // Para proteger el acceso al panel de control
 
+        $cuentapro = new Productos();
+        $cuentamen = new Menus();
+        $cuentaofe = new Ofertas(); 
         $cuentaCat = new Categorias;
         $cuentaUsu = new Usuarios;
         $cuentaCom = new Comentarios();
-        $cuentaCag = new Productos();
-        $cuentaMen = new Menus();
-        $productos = Productos::where('oferta', '1'); 
-        $cuenta = count($productos);
-
+        
+        $regisPro = $cuentapro->contar('productos');
+        $regisMen = $cuentamen->contar('menus');
+        $regisOfe = $cuentaofe->contar('ofertas');
         $regisCat = $cuentaCat->contar('categorias');
         $regisUsu = $cuentaUsu->contar('usuarios');
         $regisCom = $cuentaCom->contar('comentarios');
-        $regisCag = $cuentaCag->contar('productos');
-        $menus = $cuentaMen->contar('menus');
  
          $router->render_dash('/admin',[
+            "productos" => $regisPro,
+            "menus" => $regisMen,
+            "ofertas" => $regisOfe,
             "categorias" => $regisCat,
             "usuarios" => $regisUsu,
-            "comentarios" => $regisCom,
-            "carta_general" => $regisCag,
-            "menus" => $menus,
-            "cuentas" => $cuenta
+            "comentarios" => $regisCom
          ]);
 
     }
