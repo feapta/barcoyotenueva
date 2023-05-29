@@ -36,7 +36,7 @@
 
     <div class="campo">
         <label for="titulo">Título</label>
-        <input type="text" id="titulo" name="producto[titulo]" placeholder="Título" value=<?php echo s($productos->titulo); ?>>
+        <input type="text" id="titulo" name="producto[titulo]" placeholder="Título" value="<?php echo s($productos->titulo); ?>">
     </div>
 
     <div class="campo">
@@ -48,7 +48,7 @@
         <label for="media">Media</label>
         <select name="producto[media]"  id="media">
         <?php if($productos->id) { ?>
-                <option value=<?php echo s($productos->media); ?> selected><?php if($productos->media === '1') { echo "Si";} else { echo "No";}?></option>
+                <option value="<?php echo s($productos->media); ?>" selected><?php if($productos->media === '1') { echo "Si";} else { echo "No";}?></option>
             <?php }else { ?>
                 <option value="">-- Seleccione --</option>
             <?php }?>
@@ -60,17 +60,17 @@
 
     <div class="campo">
         <label for="precio">Precio</label>
-        <input type="number" step="0.01" id="precio" name="producto[precio]" placeholder="0,00" value=<?php echo s($productos->precio); ?>>
+        <input type="number" step="0.01" id="precio" name="producto[precio]" placeholder="0,00" value="<?php echo s($productos->precio); ?>">
     </div>
 
     <div class="campo">
         <label for="precio_ofer">Precio oferta</label>
-        <input type="number" step="0.01" id="precio_ofer" class="precios" name="producto[precio_ofer]" placeholder="0,00" min="0" value=<?php echo s($productos->precio_ofer); ?>>
+        <input type="number" step="0.01" id="precio_ofer" class="precios" name="producto[precio_ofer]" placeholder="0,00" min="0" value="<?php echo s($productos->precio_ofer); ?>">
     </div>
 
     <div class="campo">
         <label for="precio_med">Precio media</label>
-        <input type="number" step="0.01" id="precio_med" class="precios" name="producto[precio_med]" placeholder="0,00" min="0" value=<?php echo s($productos->precio_med); ?>>
+        <input type="number" step="0.01" id="precio_med" class="precios" name="producto[precio_med]" placeholder="0,00" min="0" value="<?php echo s($productos->precio_med); ?>">
     </div>
 
     <div class="campo">

@@ -1,7 +1,7 @@
 
     <div class="campo">
         <label for="nombre">Título</label>
-        <input type="text" id="nombre" name="menu[nombre]" placeholder="Nombre" value=<?php echo s($menus->nombre); ?>>
+        <input type="text" id="nombre" name="menu[nombre]" placeholder="Nombre" value= "<?php echo s($menus->nombre); ?>">
     </div>
 
     <div class="campo">
@@ -11,7 +11,7 @@
 
     <div class="campo">
         <label for="precio">Precio</label>
-        <input type="number" step="0.01" id="precio" name="menu[precio]" placeholder="0,00" value=<?php echo s($menus->precio); ?>>
+        <input type="number" step="0.01" id="precio" name="menu[precio]" placeholder="0,00" value= "<?php echo s($menus->precio); ?>">
     </div>
 
     <div class="campo">

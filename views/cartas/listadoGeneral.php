@@ -10,7 +10,7 @@
     <div class="botones">
         <a href="/" class="boton_verde">Volver</a>
         <a href="/carta_general" class="boton_verde">Carta</a>
-        <a href="/carta_ofertas" class="boton_verde">Menus</a>
+        <a href="/menus" class="boton_verde">Menus</a>
         <a href="/ofertas" class="boton_verde">Ofertas</a>
     </div>
   
