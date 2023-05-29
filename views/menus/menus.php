@@ -2,7 +2,7 @@
 
 <!-- Menus -->
 
-<div class="contenedor contenido_centrado contenedor_ofertas">
+<div class="contenedor contenido_centrado tabla">
     <h3>Menus</h3>
 
     <div class="contenedor_botones">
