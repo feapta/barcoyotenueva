@@ -10,8 +10,7 @@
                 <tr>
                     <th>Id</th>
                     <th class="C_imagen">imagen</th>
-                    <th>Categoria</th>
-                    <th>Título</th>
+                    <th>Nombre</th>
                     <th>Descripción</th>
                     <th>Precio</th>
                     <th>Creada</th>
@@ -31,8 +30,4 @@
 
 
 
-<?php
-    $script .= '
-        <script src="/build/js/datatable/menus.js"></script>
-    ';
-?>
+<?php   $script = '<script src="/build/js/datatable/menus.js"></script>'; ?>

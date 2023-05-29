@@ -104,6 +104,9 @@ class MenusControllers{
 
                 // Inserta el registro en la base de datos si no hay errores
                 if(empty($alertas)){
+                    if($_FILES['menu']['tmp_name']['imagen']){
+                        $imagen->save($carpeta . $nombreImagen);
+                    }
                     
                     $menus->guardar();
                     header('Location: /menus/listarDash');

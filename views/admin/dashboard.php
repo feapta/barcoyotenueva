@@ -47,7 +47,7 @@
 
                 <aside class="sidebar">
                     <div class="navegaciones">
-                        <!-- si se cambia menus hay que cambiarlo en scss aside -->
+                        <!-- si se cambia los menus hay que cambiarlo en scss navegaciones -->
                         <!-- paso 1 CATEGORIAS -->
                         <div data-paso_menu="1" class="menu_dash">
                             <img data-paso_menu="1" class="img_navega" src="/build/img/barras.svg" alt="Icono">
