@@ -14,7 +14,7 @@
             <?php foreach($menus as $menu) { ?>
                 <li class="seleccion">
                     <img src="/imagenes_menus/<?php echo $menu->imagen; ?>" alt="Imagenes">
-                    <h4>    <?php echo $menu->titulo; ?> </h4>
+                    <h4>    <?php echo $menu->nombre; ?> </h4>
                     <p>     <?php echo $menu->descripcion; ?></p>
                     <h5>    <?php echo $menu->precio; ?> €</h5>
                 </li>

@@ -31,7 +31,7 @@ class ProductosControllers{
             $productos = Productos::allOrdenAlfaGeneral($catego->categoria);
 
             if(!$productos){
-                Productos::setAlerta('error', 'Lo sentimos, pero no hemos encontrado ofertas');
+                Productos::setAlerta('error', 'Lo sentimos, pero no hemos encontrado productos');
             }
 
             $alertas = Productos::getAlertas();
