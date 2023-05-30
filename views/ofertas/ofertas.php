@@ -3,11 +3,12 @@
 <!-- Ofertas de temporada -->
 
 <div class="contenedor contenido_centrado tabla">
-    <h3> Ofertas especiales de temporada</h3>
     
     <div class="contenedor_botones">
         <a href="/" class="boton_verde" type="submit">Volver</a>
     </div>
+
+    <h3> Ofertas de temporada</h3>
 
     <div class="tabla_oferta">
         <ul class="tabla_a">

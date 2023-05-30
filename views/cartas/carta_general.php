@@ -3,12 +3,13 @@
 <!-- Categorias de la carta -->
 
 <div class="contenedor contenido_centrado cartas">
+
+    <div class="contenedor_botones">
+        <a href="/" class="boton_verde volver" type="submit">Inicio</a>
+    </div>
+    
     <h3>Carta</h3>
     <p>¿Que desea tomar hoy?</p>
-    
-    <div class="contenedor_botones">
-        <a href="/" class="boton_verde volver" type="submit">Volver</a>
-    </div>
     
     <ul class="tabla">
         <?php foreach($categoria as $cate) { ?>
