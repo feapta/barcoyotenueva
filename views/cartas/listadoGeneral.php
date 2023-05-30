@@ -17,9 +17,9 @@
 
     <?php include_once __DIR__ . '/../templates/alertas.php'; ?>
     
-        <ul>
+        <ul class="tabla">
             <?php foreach($productos as $producto) { ?>
-                <li>
+                <li class="seleccion">
 
                     <div class="imagen">
                         <img src="/imagenes_cartas/<?php echo $producto->imagen; ?>" alt="Imagenes">
