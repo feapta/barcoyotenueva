@@ -4,7 +4,7 @@
 
  <div class="contenedor listado_cartas">
 
-    <div class="contenedor_botones">
+    <div class="botones">
         <a href="/" class="boton_verde">Inicio</a>
         <a href="/ofertas" class="boton_verde">Ofertas</a>
         <a href="/menus" class="boton_verde">Menus</a>
