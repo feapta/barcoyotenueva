@@ -3,10 +3,7 @@
  <!-- Listado cartas -->
 
  <div class="contenedor listado_cartas">
-    <div class="titulo">
-        <h3>  <?php echo $categorias->categoria; ?> </h3>
-     </div>
-    
+
     <div class="botones">
         <a href="/" class="boton_verde">Inicio</a>
         <a href="/ofertas" class="boton_verde">Ofertas</a>
@@ -14,6 +11,10 @@
         <a href="/carta_general" class="boton_verde">Carta</a>
     </div>
   
+    <div class="titulo">
+        <h3>  <?php echo $categorias->categoria; ?> </h3>
+    </div>
+
     <?php include_once __DIR__ . '/../templates/alertas.php'; ?>
     
         <ul>
