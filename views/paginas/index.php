@@ -118,8 +118,8 @@
         </div>
 
         <div class="botones">
-            <a href="/blog" class="boton_amarillo">Ver todas</a> 
-            <a href="/dejar" class="boton_amarillo">Comentar</a>
+            <a href="/blog" class="boton_amarillo" data-paso="2">Ver todas</a> 
+            <a href="/blog" class="boton_amarillo" data-paso="3">Comentar</a>
             <a href="/usuarios/registro" class="boton_amarillo">Registrarse</a>
         </div>
     </div>
