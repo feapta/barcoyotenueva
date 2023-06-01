@@ -141,9 +141,5 @@
                 <h4>twiter</h4>
                 <a href=""><img src="/build/img/gorjeo.webp" alt=""></a>
             </div>
-            <div>
-                <h4>whatsapp</h4>
-                <a href="/contacto"><img src="/build/img/whatsapp.webp" alt=""></a>
-            </div>
         </div>
     </div>

@@ -12,13 +12,12 @@
                 <h4>Servicio a domicilio</h4>
                 <p>Pedido minimo 12€</p>
                 <p>Horario de pedido</p>
-                <p>Mañanas: 13:00 a 16:00 - Tardes: 19:00 a 23:00</p>
-                <h5>Pedidos por whatsapp - Aceptamos Bizum</h5>
+                <p>Mañanas: 13:00 a 16:00 - Tardes: 19:00 a 00:00</p>
+                <h5>Aceptamos pagos por Bizum</h5>
                 <div class="iconos">
-                    <img loading="lazy" src="build/img/whatsapp.webp" alt="Icono whatsapp"> 
                     <img loading="lazy" src="build/img/bizum.png" alt="Icono bizum"> 
                 </div>
-                <p>Tlf: 123456789</p>
+                <p>Tlf: 693 86 63 20</p>
             </div>
         </div>
 
