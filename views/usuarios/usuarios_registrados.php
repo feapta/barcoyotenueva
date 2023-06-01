@@ -1,6 +1,13 @@
 
 <!-- Pagina principal de los usuarios no administradores -->
     
+<?php
+
+if(!isset($_SESSION)){
+    session_start();
+}
+
+?>
     <!-- Campos ocultos -->
     <?php if($usuarios->id) { ?>
             <input type="hidden" id="regis" name="califica[regis]" value="<?php echo s($usuarios->confirmado) ?>">
