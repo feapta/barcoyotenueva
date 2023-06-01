@@ -116,11 +116,14 @@
                 <?php  } ?>
             </div>
         </div>
-
-        <div class="botones">
-            <a href="/blog" class="boton_amarillo" data-paso="2">Ver todas</a> 
+        <div class="barraBotones">
+            <button href="/blog" class="boton_amarillo" data-paso="2">Ver todas</button>
+            <button href="/blog" class="boton_amarillo" data-paso="3">Comentar</button>
+            <button href="/usuarios/registro" class="boton_amarillo">Registrarse</button>
+            
+            <!-- <a href="/blog" class="boton_amarillo" data-paso="2">Ver todas</a> 
             <a href="/blog" class="boton_amarillo" data-paso="3">Comentar</a>
-            <a href="/usuarios/registro" class="boton_amarillo">Registrarse</a>
+            <a href="/usuarios/registro" class="boton_amarillo">Registrarse</a> -->
         </div>
     </div>
 
