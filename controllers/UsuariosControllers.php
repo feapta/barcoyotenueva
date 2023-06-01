@@ -25,6 +25,7 @@ class UsuariosControllers{
 
                  if($usuarios){
                     if( $usuarios->comprobaciones($auth->password)){    // Se verifica que el usuario exita y este confirmado
+                    session_start();
 
                         $_SESSION['id'] = $usuarios->id;
                         $_SESSION['nombre'] = $usuarios->nombre . " " . $usuarios->apellidos;
@@ -35,14 +36,12 @@ class UsuariosControllers{
                         $_SESSION['imagen'] = $usuarios->imagen;
 
                         if($usuarios->admin === "1"){
-                            session_start();
                             $_SESSION['admin'] = 'admin';
                             $_SESSION['nombre'] = $usuarios->nombre . " " . $usuarios->apellidos;
                             $_SESSION['imagen'] = $usuarios->imagen;
                             header("Location: /dashboard");
                         }
                         else{
-                            session_start();
                             $_SESSION['admin'] = 'usuario';
                             $_SESSION['id'];
                             header("Location: /usuarios_registrados?id=$usuarios->id");

@@ -48,7 +48,7 @@ $nombreSolo = $_SESSION['nombreSolo'] ?? '';
                     <?php endif?>
                     <a href="/contacto">Contacto</a>
                     <a href="/nosotros">Nosotros</a>
-                    <a href="/blog">Blog</a>
+                    <a href="/blog?1">Blog</a>
                     <a href="/login">Acceso</a>
                     <?php if($auth): ?>
                     <a href="/logout">Cerrar sesión</a>
@@ -69,7 +69,7 @@ $nombreSolo = $_SESSION['nombreSolo'] ?? '';
             <nav class="navegacion_footer">
                 <a href="/contacto">Contacto</a>
                 <a href="/nosotros">Nosotros</a>
-                <a href="/blog">Blog</a>
+                <a href="/blog?1">Blog</a>
                 <a href="/login">Acceso</a>
             </nav>
         </div>

@@ -119,7 +119,7 @@
                             <a href="/dashboard"><img src="/build/img/flecha-dr16-B.png" alt="">   Admin</a>
                             <a href="/contacto"><img src="/build/img/flecha-dr16-B.png" alt="">   Contacto</a>
                             <a href="/nosotros"><img src="/build/img/flecha-dr16-B.png" alt="">   Nosotros</a>
-                            <a href="/blog"><img src="/build/img/flecha-dr16-B.png" alt="">   Blog</a>
+                            <a href="/blog?1"><img src="/build/img/flecha-dr16-B.png" alt="">   Blog</a>
                             <a href="/login"><img src="/build/img/flecha-dr16-B.png" alt="">   Usuarios</a>
                             <a href=""></a>
                             <img class="dark_mode_boton" src="/build/img/dark-mode.svg" alt="">
