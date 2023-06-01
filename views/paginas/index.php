@@ -146,3 +146,7 @@
             </div>
         </div>
     </div>
+
+    <?php  
+    $script .= '<script src="/build/js/botones_arriba.js"></script>';
+?>
