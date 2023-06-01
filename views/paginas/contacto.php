@@ -40,7 +40,7 @@
             <h4>Contacto</h4>
             <p>C/ Tercia, 51</p>
             <p>13420 - Malagón - Ciudad Real</p>
-            <p>Email: info@coyote.es</p>
+            <p>Email: info@barcoyote.es</p>
 
 
             <div class="map">

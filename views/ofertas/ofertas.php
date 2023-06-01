@@ -5,7 +5,7 @@
 <div class="contenedor contenido_centrado tabla">
     
     <div class="contenedor_botones">
-        <a href="/" class="boton_verde" type="submit">Volver</a>
+        <a href="/" class="boton_light-green-400" type="submit">Volver</a>
     </div>
 
     <h3> Ofertas de temporada</h3>
@@ -61,7 +61,7 @@
     </div>
 
     <div class="contenedor_botones">
-        <a href="/" class="boton_verde" type="submit">Volver</a>
+        <a href="/" class="boton_light-green-400" type="submit">Volver</a>
     </div>
 
 </div>

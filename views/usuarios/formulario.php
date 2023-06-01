@@ -64,13 +64,13 @@
 
     <?php if($usuarios->id) { ?>
         <div class="botones_usuarios">
-            <input type="submit" class="boton_verde mostrar_boton"  value="Guardar" >
-            <input type="button" class="boton_verde cambioPassword" value="Cambiar password">
+            <input type="submit" class="boton_light-green-400 mostrar_boton"  value="Guardar" >
+            <input type="button" class="boton_light-green-400 cambioPassword" value="Cambiar password">
             <input type="button" class="boton_rojo eliminarCuenta"  value="Eliminar su cuenta">
         </div>
     <?php } else { ?>
         <div class="contenedor_botones">
-            <input type="submit" value="Registro" class="boton_verde">
+            <input type="submit" value="Registro" class="boton_light-green-400">
         </div>
     <?php }?>
 

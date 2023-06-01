@@ -42,6 +42,6 @@
     </div>
 
     <div class="contenedor_botones">
-        <a href="/" class="boton_verde volver" type="submit">Volver</a>
+        <a href="/" class="boton_light-green-400 volver" type="submit">Volver</a>
     </div>
 </div>

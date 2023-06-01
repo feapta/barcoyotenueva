@@ -5,7 +5,7 @@
 <div class="contenedor contenido_centrado cartas">
 
     <div class="contenedor_botones">
-        <a href="/" class="boton_verde volver" type="submit">Inicio</a>
+        <a href="/" class="boton_light-green-400 volver" type="submit">Inicio</a>
     </div>
     
     <h3>Carta</h3>
@@ -41,6 +41,6 @@
     </div>
 
     <div class="contenedor_botones">
-        <a href="" class="boton_verde" type="submit">Volver</a>
+        <a href="" class="boton_light-green-400" type="submit">Volver</a>
     </div>
 </div>

@@ -22,7 +22,7 @@
             </div>
 
             <div class="contenedor_botones">
-                <input type="submit" class="boton_verde" value="Iniciar Sesión">
+                <input type="submit" class="boton_light-green-400" value="Iniciar Sesión">
             </div>
     </form>
 

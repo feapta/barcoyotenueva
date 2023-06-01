@@ -5,10 +5,10 @@
  <div class="contenedor listado_cartas">
 
     <div class="botones">
-        <a href="/" class="boton_verde">Inicio</a>
-        <a href="/ofertas" class="boton_verde">Ofertas</a>
-        <a href="/menus" class="boton_verde">Menus</a>
-        <a href="/carta_general" class="boton_verde">Carta</a>
+        <a href="/" class="boton_light-green-400">Inicio</a>
+        <a href="/ofertas" class="boton_light-green-400">Ofertas</a>
+        <a href="/menus" class="boton_light-green-400">Menus</a>
+        <a href="/carta_general" class="boton_light-green-400">Carta</a>
     </div>
   
     <div class="titulo">

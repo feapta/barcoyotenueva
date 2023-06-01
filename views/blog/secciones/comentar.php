@@ -44,7 +44,7 @@
             </div>
             
             <div class="contenedor_botones">
-                <input type="submit" value="Enviar" class="boton_verde">
+                <input type="submit" value="Enviar" class="boton_light-green-400">
             </div>
     </form>
 
