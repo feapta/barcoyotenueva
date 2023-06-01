@@ -10,7 +10,7 @@
 
             <div class="texto_pedidos">
                 <h4>Servicio a domicilio</h4>
-                <p>Pedido minimo 12€</p>
+                <p>Pedido minimo 14€</p>
                 <p>Horario de pedido</p>
                 <p>Mañanas: 13:00 a 16:00 - Tardes: 19:00 a 00:00</p>
                 <h5>Aceptamos pagos por Bizum</h5>
