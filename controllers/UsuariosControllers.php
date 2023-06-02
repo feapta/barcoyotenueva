@@ -44,7 +44,7 @@ class UsuariosControllers{
                         else{
                             $_SESSION['admin'] = 'usuario';
                             $_SESSION['id'];
-                            header("Location: /usuarios_registrados?id=$usuarios->id");
+                            header("Location: /usuarios_registrados?1&id=$usuarios->id");
                         }
                     }
                  } 
