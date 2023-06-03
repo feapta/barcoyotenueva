@@ -18,7 +18,7 @@
             </div>
 
             <div class="campo comentarios">
-                <label>Calificación</label>
+                <label>Calificanos</label>
                 <p class="clasificacion">
                     <input id="radio5" type="radio" name="califica[estrellas]" value="5"><!--
                     --><label for="radio5">★</label><!--
