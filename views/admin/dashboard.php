@@ -124,6 +124,7 @@
                             <a href=""></a>
                             <img class="dark_mode_boton" src="/build/img/dark-mode.svg" alt="">
                         </nav>
+                        <a href="https://email.ionos.es/appsuite/?tl=y#!!&app=io.ox/mail&folder=default0/INBOX">Buzón correo</a>
                     </div>
                 </aside>
             </div>
