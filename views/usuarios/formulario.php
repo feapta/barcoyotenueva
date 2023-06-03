@@ -16,7 +16,7 @@
 
     <div class="campo">
         <label for="email">Email</label>
-        <input type="email" id="email" name="usuarios[email]" placeholder="Email" value=<?php echo s($usuarios->email); ?>>
+        <input type="email" id="email" name="usuarios[email]" placeholder="Email" value="<?php echo s($usuarios->email); ?>">
     </div>
     
     <!-- Muestra el campo de password si no hay un ID -->
@@ -43,7 +43,7 @@
 
     <div class="campo">
         <label for="telefono">Teléfono</label>
-        <input type="number" id="telefono" name="usuarios[telefono]" placeholder="Teléfono" value=<?php echo s($usuarios->telefono); ?>>
+        <input type="number" id="telefono" name="usuarios[telefono]" placeholder="Teléfono" value="<?php echo s($usuarios->telefono); ?>">
     </div>
 
     <div class="campo">

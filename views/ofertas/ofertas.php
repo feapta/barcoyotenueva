@@ -32,7 +32,6 @@
                             $fecha = date_create($oferta->valida);
                             $Unixfecha = date_timestamp_get($fecha);
                             $dia_semana = date('N', $Unixfecha);
-                            //debuguear($dia_semana);
                             echo $array_dia_semana[$dia_semana] . " - " .date( "d - m - Y", $Unixfecha);
 
                         ?>
