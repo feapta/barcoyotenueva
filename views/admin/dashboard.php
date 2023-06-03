@@ -140,7 +140,7 @@
                 <p class="relog"></p>
             </div>
             <div class="mobile_dash">
-                <img class="nav_dash" src="/build/img/barras.svg" alt="Icono navegacion resposive">
+                <img class="nav_dash" src="/build/img/barras.svg" alt="Icono">
             </div>
 
             <div>
