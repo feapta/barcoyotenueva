@@ -8,7 +8,7 @@
         <a href="/" class="boton_light-green-400 volver" type="submit">Volver</a>
     </div>
 
-    <h3>Menus</h3>
+    <h3>Bebidas</h3>
 
     <div class="tabla_oferta">
         <ul class="tabla_a">
