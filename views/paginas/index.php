@@ -25,7 +25,7 @@
 
             <div class="conteImg">
                 <a href="/ofertas">
-                    <img loading="lazy" src="/build/img/ofertas.webp" alt="Ofertas">
+                    <img loading="lazy" src="/build/img/1.jpg" alt="Ofertas">
                 </a>
             </div>
 
@@ -41,7 +41,7 @@
 
             <div class="conteImg">
                 <a href="/menus" >
-                    <img loading="lazy" src="/build/img/menus.webp" alt="Menus">
+                    <img loading="lazy" src="/build/img/Bebidas4.jpg" alt="Menus">
                 </a>
             </div>
 
