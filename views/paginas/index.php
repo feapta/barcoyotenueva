@@ -41,7 +41,7 @@
 
             <div class="conteImg">
                 <a href="/menus" >
-                    <img loading="lazy" src="/build/img/Bebidas4.jpg" alt="Menus">
+                    <img loading="lazy" src="/build/img/bebidas.jpg" alt="Menus">
                 </a>
             </div>
 
