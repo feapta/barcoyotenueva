@@ -3,9 +3,24 @@
 
     <!-- Cartas -->
     <div class="contenedor contenedorCartas">
+
         <div class="cartas">
             <div class="conteTitulo">
-                <h3>Ofertas temporada</h3>
+                <h3>Carta</h3>
+            </div>
+            <div class="conteImg">
+                <a href="/carta_general">
+                    <img loading="lazy" src="/build/img/carta.webp" alt="Carta">
+                </a>
+            </div>
+            <div class="conteBoton">
+                <a href="/carta_general" class="boton_amarillo-block">Ver</a>
+            </div>
+        </div>
+
+        <div class="cartas">
+            <div class="conteTitulo">
+                <h3>Cafetería</h3>
             </div>
 
             <div class="conteImg">
@@ -21,7 +36,7 @@
         
         <div class="cartas">
             <div class="conteTitulo">
-                <h3>Menus</h3>
+                <h3>Bebidas</h3>
             </div>
 
             <div class="conteImg">
@@ -35,19 +50,7 @@
             </div>
         </div>
         
-        <div class="cartas">
-            <div class="conteTitulo">
-                <h3>Carta</h3>
-            </div>
-            <div class="conteImg">
-                <a href="/carta_general">
-                    <img loading="lazy" src="/build/img/carta.webp" alt="Carta">
-                </a>
-            </div>
-            <div class="conteBoton">
-                <a href="/carta_general" class="boton_amarillo-block">Ver</a>
-            </div>
-        </div>
+
     </div>
 
     <!-- Imagen pollos por encargo -->
@@ -143,6 +146,7 @@
         </div>
     </div>
 
+    
     <?php  
     $script .= '<script src="/build/js/botones_arriba.js"></script>';
 ?>

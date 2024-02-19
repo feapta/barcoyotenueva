@@ -7,14 +7,14 @@
                 <!-- crear -->
             <?php if(!$productos->id) { ?>
                 <option value="">-- Seleccione --</option>
-            <?php }else { ?>
+            <?php } else { ?>
                 <!-- Actualizar -->
                 <option value="<?php echo s($productos->categoria); ?>"> <?php echo $productos->categoria; ?> </option>
-            <?php }?>
+            <?php } ?>
 
             <?php foreach($categorias as $cate) { ?>
                 <option value="<?php echo s($cate->categoria); ?>"> <?php echo $cate->categoria; ?></option>
-            <?php }?>
+            <?php } ?>
         </select>
         
     </div>
@@ -47,7 +47,7 @@
     <div class="campo">
         <label for="media">Media</label>
         <select name="producto[media]"  id="media">
-        <?php if($productos->id) { ?>
+            <?php if($productos->id) { ?>
                 <option value="<?php echo s($productos->media); ?>" selected><?php if($productos->media === '1') { echo "Si";} else { echo "No";}?></option>
             <?php }else { ?>
                 <option value="">-- Seleccione --</option>

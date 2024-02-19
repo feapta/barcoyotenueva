@@ -36,7 +36,7 @@ class Email{
                     
         
             $mail->setFrom('info@barcoyote.es');                       // Remitente
-            $mail->addAddress( $this->email, 'App_salon');          // Destinatario
+            $mail->addAddress( $this->email, 'Bar coyote');          // Destinatario
             $mail->Subject = 'Tienes un nuevo correo';
 
             // Usamos html para el cuerpo del mensaje
@@ -74,7 +74,7 @@ class Email{
                     
         
             $mail->setFrom('info@barcoyote.es');                       // Remitente
-            $mail->addAddress( $this->email, 'App_salon');             // Destinatario
+            $mail->addAddress( $this->email, 'Bar coyote');             // Destinatario
             $mail->Subject = 'Instrucciones restablecer password';
 
             // Usamos html para el cuerpo del mensaje

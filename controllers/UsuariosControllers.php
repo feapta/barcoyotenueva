@@ -23,10 +23,9 @@ class UsuariosControllers{
              if(empty($alertas)){
                  $usuarios = Usuarios::where_array('email', $auth->email);
 
-                 if($usuarios){
+                if($usuarios){
                     if( $usuarios->comprobaciones($auth->password)){    // Se verifica que el usuario exita y este confirmado
-                    session_start();
-
+                        session_start();
                         $_SESSION['id'] = $usuarios->id;
                         $_SESSION['nombre'] = $usuarios->nombre . " " . $usuarios->apellidos;
                         $_SESSION['nombreSolo'] = $usuarios->nombre;
@@ -36,23 +35,17 @@ class UsuariosControllers{
                         $_SESSION['imagen'] = $usuarios->imagen;
 
                         if($usuarios->admin === "1"){
-                            $_SESSION['admin'] = 'admin';
-                            $_SESSION['nombre'] = $usuarios->nombre . " " . $usuarios->apellidos;
-                            $_SESSION['imagen'] = $usuarios->imagen;
                             header("Location: /dashboard");
                         }
                         else{
-                            $_SESSION['admin'] = 'usuario';
-                            $_SESSION['id'];
                             header("Location: /usuarios_registrados?1&id=$usuarios->id");
                         }
                     }
-                 } 
-                 else{
-                    Usuarios::setAlerta('error', 'Usuario no encontrado');
                 }
              }
-         }
+         }  else {
+            Usuarios::setAlerta('error', 'Usuario no encontrado');
+        } 
         
         $alertas = Usuarios::getAlertas();
  

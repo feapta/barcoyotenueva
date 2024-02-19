@@ -260,7 +260,7 @@ class ActiveRecord {
     public static function where_tabla($tabla) {
         $query = "SELECT * FROM  $tabla ";
         $resultado = self::consultarSQL($query);
-        return $resultado;;
+        return $resultado;
     }
 
     // Obtener Registros con cierta cantidad
