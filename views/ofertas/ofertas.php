@@ -8,7 +8,7 @@
         <a href="/" class="boton_light-green-400" type="submit">Volver</a>
     </div>
 
-    <h3> Ofertas de temporada</h3>
+    <h3> Cafetería</h3>
 
     <div class="tabla_oferta">
         <ul class="tabla_a">
