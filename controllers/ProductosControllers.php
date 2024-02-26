@@ -48,7 +48,8 @@ class ProductosControllers{
         public static function listar_ofertas(Router $router){
             $inicio = false;
             $fecha =  date('Y/m/d');
-            $ofertas = Ofertas::allOrdenAlfaCartaOfertasporFecha('titulo', $fecha );
+            //$ofertas = Ofertas::allOrdenAlfaCartaOfertasporFecha('titulo', $fecha );
+            $ofertas = Ofertas::all();
 
             if(!$ofertas){
                 Ofertas::setAlerta('error', 'Lo sentimos, pero no hemos encontrado ofertas');
