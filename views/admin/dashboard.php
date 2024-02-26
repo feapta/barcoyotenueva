@@ -71,7 +71,7 @@
                         <!-- paso 3  MENUS-->
                         <div data-paso_menu="3" class="menu_dash">
                             <img  data-paso_menu="3" class="img_navega" src="/build/img/barras.svg" alt="Icono">
-                            <span data-paso_menu="3"> Menus</span>
+                            <span data-paso_menu="3"> Bebidas</span>
                         </div>
                         <nav class="navega-3">
                             <a href="/menus/listarDash"><img src="/build/img/flecha-dr16-B.png" alt="">   Menus</a>
@@ -81,7 +81,7 @@
                         <!-- paso 4  OFERTAS-->
                         <div data-paso_menu="4" class="menu_dash">
                             <img  data-paso_menu="4" class="img_navega" src="/build/img/barras.svg" alt="Icono">
-                            <span data-paso_menu="4"> Ofertas</span>
+                            <span data-paso_menu="4"> Cafetería</span>
                         </div>
                         <nav class="navega-4">
                             <a href="/admin/ofertas"><img src="/build/img/flecha-dr16-B.png" alt="">   Ofertas</a>
