@@ -6,9 +6,9 @@
 
     <div class="botones">
         <a href="/" class="boton_light-green-400">Inicio</a>
-        <a href="/ofertas" class="boton_light-green-400">Ofertas</a>
-        <a href="/menus" class="boton_light-green-400">Menus</a>
         <a href="/carta_general" class="boton_light-green-400">Carta</a>
+        <a href="/ofertas" class="boton_light-green-400">Cafetería</a>
+        <a href="/menus" class="boton_light-green-400">Bebidas</a>
     </div>
   
     <div class="titulo">
