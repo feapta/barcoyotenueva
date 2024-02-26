@@ -15,11 +15,6 @@
             <label for="precio">Precio</label>
             <input type="number" step="0.01" id="precio" name="oferta[precio]" placeholder="0,00" value="<?php echo s($ofertas->precio); ?>">
         </div>
-      
-        <div class="campo">
-            <label for="valida">Valida</label>
-            <input type="date" id="valida" name="oferta[valida]" value="<?php echo s($ofertas->valida); ?>">
-        </div>
 
         <div class="campo">
             <label for="imagen">Imagen</label>
