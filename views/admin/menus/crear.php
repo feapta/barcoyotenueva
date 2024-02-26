@@ -2,7 +2,7 @@
 <!-- Pagina crea nuevo menu -->
 
 <div class="contenedor contenido_centrado crear_nuevo_menu">
-    <h3>Crear nuevo menu</h3>
+    <h3>Crear bebida</h3>
 
     <?php include_once __DIR__ . "/../../templates/alertas.php" ?>
 

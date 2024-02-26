@@ -2,7 +2,11 @@
 <!-- Pagina menus -->
 
 <div class="contenedor contenedor_tablas">
-    <h3>Carta ofertas</h3>
+    <h3>Bebidas</h3>
+
+    <div class="contenedor_botones">
+        <a href="/menus/crearDash" class="boton_verde ">Crear</a>
+    </div>
 
     <div class="contenedor_tabla">
         <table id="menus" class="display" style="width:100%">

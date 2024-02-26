@@ -74,7 +74,7 @@
                             <span data-paso_menu="3"> Bebidas</span>
                         </div>
                         <nav class="navega-3">
-                            <a href="/menus/listarDash"><img src="/build/img/flecha-dr16-B.png" alt="">   Menus</a>
+                            <a href="/menus/listarDash"><img src="/build/img/flecha-dr16-B.png" alt="">   Bebidas</a>
                             <a href="/menus/crearDash"><img src="/build/img/flecha-dr16-B.png" alt="">   Crear</a>
                         </nav>
 
@@ -84,7 +84,7 @@
                             <span data-paso_menu="4"> Cafetería</span>
                         </div>
                         <nav class="navega-4">
-                            <a href="/admin/ofertas"><img src="/build/img/flecha-dr16-B.png" alt="">   Ofertas</a>
+                            <a href="/admin/ofertas"><img src="/build/img/flecha-dr16-B.png" alt="">   Cafetería</a>
                             <a href="/admin/crear_oferta"><img src="/build/img/flecha-dr16-B.png" alt="">   Crear</a>
                         </nav>
                         

@@ -2,7 +2,7 @@
 <!-- Crear nueva oferta -->
 
 <div class="contenedor contenido_centrado crear_nuevo_oferta">
-    <h3>Crear nueva oferta</h3>
+    <h3>Crear</h3>
 
     <?php include_once __DIR__ . "/../../templates/alertas.php" ?>
 

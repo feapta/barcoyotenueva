@@ -2,10 +2,10 @@
 <!-- Pagina ofertas -->
 
 <div class="contenedor contenedor_tablas">
-    <h3>Ofertas de temporada</h3>
+    <h3>Cafetería</h3>
     
     <div class="contenedor_botones">
-        <a href="/admin/crear_oferta" class="boton_verde ">Crear oferta</a>
+        <a href="/admin/crear_oferta" class="boton_verde ">Crear</a>
     </div>
 
     <div class="contenedor_tabla">
